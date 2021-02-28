@@ -1,13 +1,57 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.navbar-light {
+  background-color: #f0f0f0!important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar-text {
+  padding-left: 10px!important;
+  padding-right: 10px!important;
+}
+
+.hero {
+  background-image: url('./assets/img/heroBg.jpg');
+  padding: 10%;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 55%;
+  background-color: #f0f0f0;
+}
+
+.hero .biggerText {
+  padding-right: 10%;
+}
+
+.biggerText {
+  font-size: 50px;
+  color: black;
+  font-weight: 300;
+  line-height: 60px;
+}
+
+.veryBold {
+  font-weight: 800;
+}
+
+.groupButton {
+  margin-top:40px;
+  margin-bottom:40px
+}
+
+.searchForm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.searchForm input {
+  width: 100%;
+  border: none;
+  padding: 10px;
+}
+
+.hero .searchButton {
+  width: 170px;
 }
