@@ -21,10 +21,10 @@ export default function Hero() {
     return (
         <Container fluid className="hero">
             <Row>
-                <Col lg={6}>
+                <Col sm={12} lg={6}>
                     <div className="heroContent">
                         <div className="biggerText">
-                            Properties to buy in <span className="veryBold">Accra</span>
+                            Properties to buy/rent in <span className="veryBold">Accra</span>
                         </div>
                         <GroupButton 
                             options={options}
