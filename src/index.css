@@ -121,3 +121,60 @@ body {
 .card-text {
   font-weight: 300;
 }
+
+.features {
+  text-align: center;
+  padding:5%
+}
+
+.features .card {
+  text-align: left;
+  border: none;
+  margin-top: 10%;
+}
+
+.features .card-body {
+  padding: 20px 0;
+  font-size: small;
+}
+
+.footer {
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.footerContainer {
+  padding-top: 5%;
+}
+
+.footerContainer p {
+  font-size: small;
+  font-weight: 300;
+}
+
+.footerContainer .heading {
+  margin-bottom: 40px;
+}
+
+.footerContainer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footerContainer li {
+  font-size: small;
+  font-weight: 300;
+  padding: 3px 0;
+}
+
+.socialWrapper {
+  font-size: larger;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.socialWrapper .icon {
+  padding-left: 20px!important;
+}
