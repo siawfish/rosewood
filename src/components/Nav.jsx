@@ -1,10 +1,15 @@
 import React from 'react'
 import { Navbar, Button } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
 export default function Nav() {
+    const history = useHistory()
+    const gotoLogin = ()=> {
+        history.push('/login')
+    }
     return (
         <Navbar>
-            <Navbar.Brand href="#home">Rosewood</Navbar.Brand>
+            <Navbar.Brand href="/">Rosewood</Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">
                 <Navbar.Text>
@@ -16,7 +21,7 @@ export default function Nav() {
                 <Navbar.Text>
                     Favourites
                 </Navbar.Text>
-                <Button  variant="outline-secondary">
+                <Button onClick={gotoLogin}  variant="outline-secondary">
                     Login
                 </Button>
             </Navbar.Collapse>

@@ -178,3 +178,22 @@ body {
 .socialWrapper .icon {
   padding-left: 20px!important;
 }
+
+.form {
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+.form .bolderText {
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+.form label {
+  font-size: small;
+}
+
+.form small {
+  margin-top: 20px;
+  text-align: center;
+}

@@ -30,7 +30,7 @@ export default function IntroCard({
                 <div className="roundBack fadedBlue">
                     <FaCalendarCheck />
                 </div>
-                <Card.Subtitle className="mb-2 bolderText">Book</Card.Subtitle>
+                <Card.Subtitle className="mb-2 bolderText">Booking</Card.Subtitle>
                 <Card.Text>
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
@@ -44,7 +44,7 @@ export default function IntroCard({
                 <div className="roundBack fadedGreen">
                     <BsFillPersonCheckFill />
                 </div>
-                <Card.Subtitle className="mb-2 bolderText">Verify</Card.Subtitle>
+                <Card.Subtitle className="mb-2 bolderText">Payment</Card.Subtitle>
                 <Card.Text>
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
@@ -58,7 +58,7 @@ export default function IntroCard({
                 <div className="roundBack fadedOrange">
                     <FaRegHandshake />
                 </div>
-                <Card.Subtitle className="mb-2 bolderText">Sale</Card.Subtitle>
+                <Card.Subtitle className="mb-2 bolderText">Move In</Card.Subtitle>
                 <Card.Text>
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
