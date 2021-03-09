@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiOutlineFileSearch } from 'react-icons/ai'
 import { FaCalendarCheck, FaRegHandshake } from 'react-icons/fa'
-import { BsFillPersonCheckFill } from 'react-icons/bs'
+import { MdPayment } from 'react-icons/md'
 import { Col, Card } from "react-bootstrap";
 
 export default function IntroCard({
@@ -42,7 +42,7 @@ export default function IntroCard({
         return(
             <Card.Body>
                 <div className="roundBack fadedGreen">
-                    <BsFillPersonCheckFill />
+                    <MdPayment />
                 </div>
                 <Card.Subtitle className="mb-2 bolderText">Payment</Card.Subtitle>
                 <Card.Text>
