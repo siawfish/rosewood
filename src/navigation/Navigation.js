@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 import Homepage from '../pages/Homepage'
 import Login from '../pages/Login';
+import Properties from '../pages/Properties';
 import Register from '../pages/Register';
 
 export default function Navigation() {
@@ -23,6 +24,9 @@ export default function Navigation() {
                 </Route>
                 <Route exact path="/register">
                     <Register />
+                </Route>
+                <Route exact path="/properties">
+                    <Properties />
                 </Route>
             </Switch>
             <Footer />

@@ -7,12 +7,15 @@ export default function Nav() {
     const gotoLogin = ()=> {
         history.push('/login')
     }
+    const gotoProperties = ()=> {
+        history.push('/properties')
+    }
     return (
         <Navbar>
             <Navbar.Brand href="/">Rosewood</Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">
-                <Navbar.Text>
+                <Navbar.Text onClick={gotoProperties}>
                     Properties
                 </Navbar.Text>
                 <Navbar.Text>
@@ -21,7 +24,7 @@ export default function Nav() {
                 <Navbar.Text>
                     Favourites
                 </Navbar.Text>
-                <Button onClick={gotoLogin}  variant="outline-secondary">
+                <Button className="borderBtn" onClick={gotoLogin}>
                     Login
                 </Button>
             </Navbar.Collapse>

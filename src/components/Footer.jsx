@@ -5,7 +5,7 @@ import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare } from 'react-icon
 export default function Footer() {
     return (
         <Container fluid className="footer">
-            <Container className="footerContainer">
+            <Container fluid className="footerContainer">
                 <Row>
                     <Col lg={5}>
                         <div className="logo">Rosewood</div>
