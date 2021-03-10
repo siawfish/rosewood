@@ -21,6 +21,14 @@ body {
   .properties {
     padding-top: 10%;
   }
+
+  .aboutContent p {
+    max-width: 100%!important;
+  }
+
+  .aboutContent .biggerText {
+    max-width: 100%!important;
+  }
 }
 
 button {
@@ -411,6 +419,7 @@ button:active {
   padding: 0px;
   font-size: small;
 }
+
 .bubble:after {
   content: '';
   position: absolute;
@@ -423,4 +432,46 @@ button:active {
   bottom: -10px;
   left: 50%;
   margin-left: -10px;
+}
+
+.about {
+  padding: 5%;
+}
+
+.aboutContent {
+  text-align: center;
+}
+
+.aboutContent .biggerText {
+  max-width: 50%;
+  margin: 2% auto;
+}
+
+.aboutContent p {
+  font-size: small;
+  color: #404040;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.aboutContent .bgWrapper {
+  text-align: center;
+}
+
+.aboutContent .bgWrapper img {
+  width: 300px;
+}
+
+.aboutUsExtra {
+  margin-top: 5%;
+}
+
+.aboutUsExtra .boldText {
+  margin: 20px 0;
+  font-size: small;
+  font-weight: 700;
+}
+
+.aboutUsExtra small {
+  font-weight: 300;
 }

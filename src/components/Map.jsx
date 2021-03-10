@@ -19,9 +19,10 @@ export default function Map({
                 defaultZoom={11}
             >
                 {
-                    places?.map(place=>{
+                    places?.map((place, i)=>{
                         return (
                             <Marker 
+                                key={i}
                                 lat={place.lat}
                                 lng={place.lng}
                                 text={place.price}

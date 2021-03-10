@@ -1,15 +1,20 @@
 import React from 'react'
 import { Navbar, Button } from 'react-bootstrap';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 
 export default function Nav() {
     const history = useHistory()
+    const location = useLocation()
     const gotoLogin = ()=> {
         history.push('/login')
     }
     const gotoProperties = ()=> {
         history.push('/properties')
     }
+    const gotoAboutus = ()=> {
+        history.push('/aboutus')
+    }
+    const path = location.pathname
     return (
         <Navbar>
             <Navbar.Brand href="/">Rosewood</Navbar.Brand>
@@ -18,13 +23,13 @@ export default function Nav() {
                 <Navbar.Text onClick={gotoProperties}>
                     Call us on: <span>+233 24 793 8888</span>
                 </Navbar.Text>
-                <Navbar.Text onClick={gotoProperties}>
+                <Navbar.Text style={path.match('/properties')&&{color:'#8e1fc2'}} onClick={gotoProperties}>
                     Properties
                 </Navbar.Text>
-                <Navbar.Text>
+                <Navbar.Text style={path.match('/aboutus')&&{color:'#8e1fc2'}} onClick={gotoAboutus}>
                     About Us
                 </Navbar.Text>
-                <Navbar.Text>
+                <Navbar.Text style={path.match('/contactus')&&{color:'#8e1fc2'}}>
                     Contact Us
                 </Navbar.Text>
                 <Button className="borderBtn" onClick={gotoLogin}>

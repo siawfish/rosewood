@@ -6,6 +6,7 @@ import {
   } from "react-router-dom";
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
+import Aboutus from '../pages/Aboutus';
 import Homepage from '../pages/Homepage'
 import Login from '../pages/Login';
 import Properties from '../pages/Properties';
@@ -27,6 +28,9 @@ export default function Navigation() {
                 </Route>
                 <Route exact path="/properties">
                     <Properties />
+                </Route>
+                <Route exact path="/aboutus">
+                    <Aboutus />
                 </Route>
             </Switch>
             <Footer />

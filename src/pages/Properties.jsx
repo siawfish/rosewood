@@ -60,9 +60,10 @@ export default function Properties() {
                         <PropertySearch />
                         <div className="listItemsContainer">
                             {
-                                property.map(item=>{
+                                property.map((item, i)=>{
                                     return (
                                         <Item 
+                                            key={i}
                                             property={item}
                                             lg={6}
                                             seeMore={false}
