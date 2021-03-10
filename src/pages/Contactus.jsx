@@ -14,7 +14,7 @@ export default function Contactus() {
                             <div className="biggerText">
                                 Contact Information
                             </div>
-                            <small>Kindly complete the form and our team will get back to you with 24 hours</small>
+                            <small>Kindly complete the form and our team will get back to you within 24 hours</small>
                             <div style={{marginTop:40}} className="listItem"><span><FaPhoneAlt /></span> +233 24 793 8888</div>
                             <div className="listItem"><span><MdEmail /></span> Info@rosewoodghana.com</div>
                             <div className="listItem"><span><MdLocationOn /></span> Suncity Apartments, Osu, Accra</div>
