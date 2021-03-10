@@ -52,6 +52,18 @@ button:active {
   cursor: pointer;
 }
 
+.navbar-text:hover {
+  color: #8e1fc2;
+}
+
+.navbar-text span {
+  color: #8e1fc2;
+}
+
+.navbar-text span:hover {
+  color: #8e1fc275;
+}
+
 .hero {
   background-color: #f0f0f0;
   position: relative;

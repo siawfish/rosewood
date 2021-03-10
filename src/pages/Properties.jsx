@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, DropdownButton, Dropdown } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import Item from '../components/Item'
 import Map from '../components/Map'
 import PropertySearch from '../components/PropertySearch'

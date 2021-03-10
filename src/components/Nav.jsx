@@ -16,6 +16,9 @@ export default function Nav() {
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">
                 <Navbar.Text onClick={gotoProperties}>
+                    Call us on: <span>+233 24 793 8888</span>
+                </Navbar.Text>
+                <Navbar.Text onClick={gotoProperties}>
                     Properties
                 </Navbar.Text>
                 <Navbar.Text>

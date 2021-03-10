@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, DropdownButton, Dropdown } from 'react-bootstrap'
+import { DropdownButton, Dropdown } from 'react-bootstrap'
 
 export default function PropertySearch() {
     return (
