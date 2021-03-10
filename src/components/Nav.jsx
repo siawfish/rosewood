@@ -14,6 +14,9 @@ export default function Nav() {
     const gotoAboutus = ()=> {
         history.push('/aboutus')
     }
+    const gotoContactus = ()=> {
+        history.push('/contactus')
+    }
     const path = location.pathname
     return (
         <Navbar>
@@ -29,7 +32,7 @@ export default function Nav() {
                 <Navbar.Text style={path.match('/aboutus')&&{color:'#8e1fc2'}} onClick={gotoAboutus}>
                     About Us
                 </Navbar.Text>
-                <Navbar.Text style={path.match('/contactus')&&{color:'#8e1fc2'}}>
+                <Navbar.Text style={path.match('/contactus')&&{color:'#8e1fc2'}} onClick={gotoContactus}>
                     Contact Us
                 </Navbar.Text>
                 <Button className="borderBtn" onClick={gotoLogin}>

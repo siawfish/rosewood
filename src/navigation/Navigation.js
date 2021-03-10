@@ -7,6 +7,7 @@ import {
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 import Aboutus from '../pages/Aboutus';
+import Contactus from '../pages/Contactus';
 import Homepage from '../pages/Homepage'
 import Login from '../pages/Login';
 import Properties from '../pages/Properties';
@@ -31,6 +32,9 @@ export default function Navigation() {
                 </Route>
                 <Route exact path="/aboutus">
                     <Aboutus />
+                </Route>
+                <Route exact path="/contactus">
+                    <Contactus />
                 </Route>
             </Switch>
             <Footer />

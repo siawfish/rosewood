@@ -475,3 +475,87 @@ button:active {
 .aboutUsExtra small {
   font-weight: 300;
 }
+
+.contact {
+  background-color: #f0f0f0;
+  padding: 5%;
+}
+
+.contact .contactCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.contact .contactCard .left {
+  background-color: #8e1fc2;
+  border-radius: 8px;
+  padding: 5%;
+  color: #ffffff;
+}
+
+.contact .contactCard .left .biggerText {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.contact .contactCard .left small {
+  color: #f0f0f0;
+}
+
+.listItem {
+  padding: 15px 0;
+  font-weight: 300;
+}
+
+.listItem span {
+  color: orange;
+  font-size: larger;
+  margin-right: 10px;
+}
+
+.socialRow {
+  margin-top: 20%;
+  display: flex;
+  flex-direction: row;
+}
+
+.socialRow .icon {
+  padding-right: 10px;
+}
+
+.contact .contactCard .right {
+  padding: 5%;
+}
+
+.contact .contactCard .right input {
+  border: none;
+  border-bottom: 1px solid #8e1fc2;
+  border-radius: 0;
+  height: 50px;
+  font-size: small;
+}
+
+.contact .contactCard .right label {
+  color: #8e1fc2;
+  font-size: small;
+}
+
+.contact .contactCard .right textarea {
+  border: none;
+  border-bottom: 1px solid #8e1fc2;
+  border-radius: 0;
+  font-size: small;
+}
+
+.contact .contactCard .right .title {
+  font-size: medium;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.contact .contactCard .right button {
+  padding: 20px;
+  margin-top: 20px;
+  float: right;
+}
