@@ -5,6 +5,24 @@ body {
   font-family: 'Noto Sans SC', sans-serif;
 }
 
+@media only screen and (max-width: 600px) {
+  .mapContainer {
+    display: none;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .propertiesCol {
+    padding-right: 20px!important;
+  }
+
+  .properties {
+    padding-top: 10%;
+  }
+}
+
 button {
   background-color: #8e1fc2!important;
   border: 0!important;

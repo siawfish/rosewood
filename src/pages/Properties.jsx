@@ -55,7 +55,7 @@ export default function Properties() {
     return (
         <Container className="properties" fluid>
             <Row>
-                <Col style={{padding:0}} lg={5}>
+                <Col className="propertiesCol" style={{padding:0}} sm={12} lg={5}>
                     <div className="listContainer">
                         <PropertySearch />
                         <div className="listItemsContainer">
@@ -76,7 +76,7 @@ export default function Properties() {
                         </div>
                     </div>
                 </Col>
-                <Col style={{paddingRight:0}} lg={7}>
+                <Col style={{paddingRight:0}} sm={0} lg={7}>
                     <Map places={property} />
                 </Col>
             </Row>

@@ -19,10 +19,10 @@ export default function Nav() {
                     Properties
                 </Navbar.Text>
                 <Navbar.Text>
-                    News
+                    About Us
                 </Navbar.Text>
                 <Navbar.Text>
-                    Favourites
+                    Contact Us
                 </Navbar.Text>
                 <Button className="borderBtn" onClick={gotoLogin}>
                     Login
