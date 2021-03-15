@@ -1,13 +1,13 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import Item from '../components/Item'
-import Map from '../components/Map'
-import PropertySearch from '../components/PropertySearch'
-import hse1 from '../assets/img/hse1.jpg';
-import hse2 from '../assets/img/hse2.jpg';
-import hse3 from '../assets/img/hse3.jpg';
-import hse4 from '../assets/img/hse4.jpg';
-import hse5 from '../assets/img/hse5.jpg';
+import Item from '../../components/Item'
+import Map from '../../components/Map'
+import PropertySearch from '../../components/PropertySearch'
+import hse1 from '../../assets/img/hse1.jpg';
+import hse2 from '../../assets/img/hse2.jpg';
+import hse3 from '../../assets/img/hse3.jpg';
+import hse4 from '../../assets/img/hse4.jpg';
+import hse5 from '../../assets/img/hse5.jpg';
 
 export default function Properties() {
     const property = [

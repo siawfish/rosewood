@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col, Container } from 'react-bootstrap'
-import bg from '../assets/img/aboutBg.png'
+import bg from '../../assets/img/aboutBg.png'
 
 export default function Aboutus() {
     return (

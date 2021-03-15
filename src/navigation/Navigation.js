@@ -6,12 +6,12 @@ import {
   } from "react-router-dom";
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
-import Aboutus from '../pages/Aboutus';
-import Contactus from '../pages/Contactus';
-import Homepage from '../pages/Homepage'
-import Login from '../pages/Login';
-import Properties from '../pages/Properties';
-import Register from '../pages/Register';
+import Aboutus from '../pages/user/Aboutus';
+import Contactus from '../pages/user/Contactus';
+import Homepage from '../pages/user/Homepage'
+import Login from '../pages/user/Login';
+import Properties from '../pages/user/Properties';
+import Register from '../pages/user/Register';
 
 export default function Navigation() {
     return (
