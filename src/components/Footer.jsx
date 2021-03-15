@@ -1,10 +1,13 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function Footer() {
+    const location = useLocation()
+    const { pathname } = location
     return (
-        <Container fluid className="footer">
+        <Container style={pathname.match('/admin')&&{backgroundColor:"#000", color:"#f0f0f0"}} fluid className="footer">
             <Container fluid className="footerContainer">
                 <Row>
                     <Col lg={5}>
@@ -17,7 +20,7 @@ export default function Footer() {
                     <Col lg={2}>
                         <div className="heading">Company</div>
                         <ul>
-                            <li>About design</li>
+                            <li><Link to="/admin">Admin</Link></li>
                             <li>Contact</li>
                             <li>Career</li>
                             <li>Blog</li>

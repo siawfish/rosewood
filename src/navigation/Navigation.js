@@ -12,6 +12,7 @@ import Homepage from '../pages/user/Homepage'
 import Login from '../pages/user/Login';
 import Properties from '../pages/user/Properties';
 import Register from '../pages/user/Register';
+import AdminNavigation from './AdminNavigation'
 
 export default function Navigation() {
     return (
@@ -35,6 +36,9 @@ export default function Navigation() {
                 </Route>
                 <Route exact path="/contactus">
                     <Contactus />
+                </Route>
+                <Route exact path="/admin">
+                    <AdminNavigation />
                 </Route>
             </Switch>
             <Footer />

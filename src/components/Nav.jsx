@@ -19,7 +19,7 @@ export default function Nav() {
     }
     const path = location.pathname
     return (
-        <Navbar>
+        <Navbar className={path.match('/admin')?"inAdmin":null} style={path.match('/admin')&&{backgroundColor:"#000"}}>
             <Navbar.Brand href="/">Rosewood</Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">
@@ -35,9 +35,12 @@ export default function Nav() {
                 <Navbar.Text style={path.match('/contactus')&&{color:'#8e1fc2'}} onClick={gotoContactus}>
                     Contact Us
                 </Navbar.Text>
-                <Button className="borderBtn" onClick={gotoLogin}>
-                    Login
-                </Button>
+                {
+                    !path.match('/admin') &&
+                    <Button className="borderBtn" onClick={gotoLogin}>
+                        Login
+                    </Button>
+                }
             </Navbar.Collapse>
         </Navbar>
     )

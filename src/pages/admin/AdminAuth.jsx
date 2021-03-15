@@ -1,11 +1,11 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import RegisterForm from '../../components/RegisterForm'
+import LoginForm from '../../components/LoginForm'
 
-export default function Register() {
+export default function AdminAuth() {
     return (
         <Container>
-            <RegisterForm />
+            <LoginForm />
         </Container>
     )
 }
