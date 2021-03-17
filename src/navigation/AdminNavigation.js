@@ -7,6 +7,7 @@ import {
   } from "react-router-dom";
 import AdminAuth from '../pages/admin/AdminAuth'
 import AdminRegister from '../pages/admin/AdminRegister'
+import Dashboard from '../pages/admin/Dashboard'
 
 export default function AdminNavigation() {
     let location = useLocation()
@@ -25,6 +26,9 @@ export default function AdminNavigation() {
                 </Route>
                 <Route path="/admin/register">
                     <AdminRegister />
+                </Route>
+                <Route path="/admin/dashboard">
+                    <Dashboard />
                 </Route>
             </Switch>
         </Router>

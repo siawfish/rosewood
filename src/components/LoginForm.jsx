@@ -1,10 +1,16 @@
 import React from 'react'
 import { Row, Col, Form, Button } from 'react-bootstrap'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useHistory } from 'react-router-dom'
 
 export default function LoginForm() {
     const location = useLocation()
+    const history = useHistory()
     const { pathname } = location
+    const navigate = ()=> {
+        pathname.match('/admin') ? 
+        history.push('/admin/dashboard') :
+        history.push('/account')
+    }
     return (
         <Row>
             <Col md={{ span: 4, offset: 4 }}>
@@ -22,7 +28,7 @@ export default function LoginForm() {
                         <Form.Control style={pathname.match('/admin')&&{backgroundColor:"#333", color:"#fff"}} type="password" placeholder="Password" />
                     </Form.Group>
 
-                    <Button block variant="primary" type="submit">
+                    <Button onClick={navigate} block variant="primary" type="submit">
                         Login
                     </Button>
                     <small>{pathname.match('/admin')?"Are you an employee":"Don't have an account"}? <Link to={pathname.match('/admin')?"/admin/register":"/register"}>{pathname.match('/admin')?"Create an admin account":"Register here"}.</Link></small>
