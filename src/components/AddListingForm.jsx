@@ -124,7 +124,7 @@ export default function AddListingForm({
             } */}
             <Modal.Title>Add a listings</Modal.Title>
             <Row>
-                <Col lg={6}>
+                <Col lg={5}>
                     <Form.Label>Images</Form.Label>
                     <Container className="imagesWrapper">
                         <ImageUploader
@@ -134,31 +134,32 @@ export default function AddListingForm({
                             imgExtension={[".jpg", ".png", ".gif"]}
                             maxFileSize={5242880}
                             withPreview
+                            fileContainerStyle={{backgroundColor:"#000"}}
                         />
                     </Container>
                 </Col>
-                <Col lg={6}>
+                <Col lg={7}>
                     {/* <div className="err">{err}</div> */}
                     <Form.Group controlId="formGridName">
                         <Form.Label>Title</Form.Label>
-                        <Form.Control type="text" placeholder="Enter product name" />
+                        <Form.Control type="text" placeholder="Enter title" />
                     </Form.Group>
                     <Form.Group controlId="formGridCategory">
-                        <Form.Label>Description</Form.Label>
-                        <Form.Control type="text" placeholder="Enter product category" />
+                        <Form.Label>Category</Form.Label>
+                        <Form.Control type="text" placeholder="Enter category" />
                     </Form.Group>
                     <Form.Row>
                         <Form.Group as={Col} controlId="formGridQty">
-                            <Form.Label>Product Quantity</Form.Label>
-                            <Form.Control type="number" placeholder="How much of product are there?" />
+                            <Form.Label>Developer</Form.Label>
+                            <Form.Control type="number" placeholder="Rebohoth Developers" />
                         </Form.Group>
                         <Form.Group as={Col} controlId="formPrice">
                             <Form.Label>Price</Form.Label>
-                            <Form.Control type="number" placeholder="Enter product price" />
+                            <Form.Control type="number" placeholder="200,000" />
                         </Form.Group>
                     </Form.Row>
                     <Form.Group controlId="exampleForm.ControlTextarea1">
-                        <Form.Label>Amenities</Form.Label>
+                        <Form.Label>Description</Form.Label>
                         <Form.Control as="textarea" rows={3} />
                     </Form.Group>
                 </Col>
@@ -168,7 +169,7 @@ export default function AddListingForm({
                 <Button 
                     // disabled={isLoading} 
                     // onClick={onSubmit} 
-                    variant="primary">{"Save Product"}
+                    variant="primary">{"Save"}
                 </Button>
             </div>
         </Container>

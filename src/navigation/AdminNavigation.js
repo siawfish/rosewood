@@ -13,7 +13,7 @@ export default function AdminNavigation() {
     let location = useLocation()
     React.useEffect(() => {
         if(location.pathname.match('/admin')){
-            document.body.style.backgroundColor = "#333"
+            document.body.style.backgroundColor = "#555"
         } else {
             document.body.style.backgroundColor = "#fff"
         }

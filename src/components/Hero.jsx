@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
-import GroupButton from './GroupButton'
 import ButtonDropdown from './ButtonDropdown'
 import Slider from "react-slick";
 import cr1 from '../assets/img/cr1.jpg'
@@ -11,16 +10,7 @@ import cr5 from '../assets/img/cr5.jpg'
 import cr6 from '../assets/img/cr6.jpg'
 
 export default function Hero() {
-    const options = [
-        {
-            name:"Buy",
-            value:"buy"
-        },
-        {
-            name:"Rent",
-            value:"rent"
-        }
-    ]
+    
     const settings = {
         infinite: true,
         speed: 500,
@@ -78,12 +68,6 @@ export default function Hero() {
                 <Row>
                     <Col sm={12} lg={12}>
                         <div className="heroContent">
-                            <div className="biggerText">
-                                Properties to buy/rent in <span className="veryBold">Accra</span>
-                            </div>
-                            <GroupButton 
-                                options={options}
-                            />
                             <div className="searchForm">
                                 <ButtonDropdown />
                                 <input placeholder="search for locality, landmark or project" />

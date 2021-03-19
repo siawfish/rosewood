@@ -13,6 +13,18 @@ export default function RegisterForm() {
                     <div className="bolderText">Create {pathname.match('/admin')?"an admin account":"a free account"}</div>
 
                     <Form.Row>
+                        <Form.Group as={Col} controlId="formGridFirstName">
+                        <Form.Label>First Name</Form.Label>
+                        <Form.Control style={pathname.match('/admin')&&{backgroundColor:"#333", color:"#fff"}} type="text" placeholder="John" />
+                        </Form.Group>
+
+                        <Form.Group as={Col} controlId="formGridLastName">
+                        <Form.Label>Last Name</Form.Label>
+                        <Form.Control style={pathname.match('/admin')&&{backgroundColor:"#333", color:"#fff"}} type="text" placeholder="Doe" />
+                        </Form.Group>
+                    </Form.Row>
+
+                    <Form.Row>
                         <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Email</Form.Label>
                         <Form.Control style={pathname.match('/admin')&&{backgroundColor:"#333", color:"#fff"}} type="email" placeholder="Enter email" />
@@ -21,36 +33,6 @@ export default function RegisterForm() {
                         <Form.Group as={Col} controlId="formGridPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control style={pathname.match('/admin')&&{backgroundColor:"#333", color:"#fff"}} type="password" placeholder="Password" />
-                        </Form.Group>
-                    </Form.Row>
-
-                    <Form.Group controlId="formGridAddress1">
-                        <Form.Label>Address</Form.Label>
-                        <Form.Control style={pathname.match('/admin')&&{backgroundColor:"#333", color:"#fff"}} placeholder="1234 Main St" />
-                    </Form.Group>
-
-                    <Form.Group controlId="formGridAddress2">
-                        <Form.Label>Address 2</Form.Label>
-                        <Form.Control style={pathname.match('/admin')&&{backgroundColor:"#333", color:"#fff"}} placeholder="Apartment, studio, or floor" />
-                    </Form.Group>
-
-                    <Form.Row>
-                        <Form.Group as={Col} controlId="formGridCity">
-                        <Form.Label>City</Form.Label>
-                        <Form.Control style={pathname.match('/admin')&&{backgroundColor:"#333", color:"#fff"}} />
-                        </Form.Group>
-
-                        <Form.Group as={Col} controlId="formGridState">
-                        <Form.Label>State</Form.Label>
-                        <Form.Control style={pathname.match('/admin')&&{backgroundColor:"#333", color:"#fff"}} as="select" defaultValue="Choose...">
-                            <option>Choose...</option>
-                            <option>...</option>
-                        </Form.Control>
-                        </Form.Group>
-
-                        <Form.Group as={Col} controlId="formGridZip">
-                        <Form.Label>Zip</Form.Label>
-                        <Form.Control style={pathname.match('/admin')&&{backgroundColor:"#333", color:"#fff"}} />
                         </Form.Group>
                     </Form.Row>
 

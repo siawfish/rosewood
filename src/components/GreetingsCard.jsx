@@ -5,7 +5,8 @@ import { Jumbotron, Button } from 'react-bootstrap'
 // import { useHistory } from 'react-router-dom'
 
 export default function GreetingsCard({
-    name
+    name,
+    onAddListing
 }) {
     // const history = useHistory()
     // const { profile } = useSelector(state=>state.app)
@@ -24,9 +25,10 @@ export default function GreetingsCard({
                     extra attention to featured content or information.
                 </small>
             </p>
-            <p>
-                <Button onClick={logout} variant="primary">Logout</Button>
-            </p>
+            <div>
+                <Button style={{marginRight:20}} onClick={logout} variant="primary">Logout</Button>
+                <Button onClick={onAddListing} variant="primary">Add Listing</Button>
+            </div>
         </Jumbotron>
     )
 }

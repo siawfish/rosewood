@@ -6,9 +6,21 @@ import Settings from '../../components/Settings'
 import Listings from '../../components/Listings'
 import Users from '../../components/Users'
 import Messages from '../../components/Messages'
+import FeatureDialog from '../../components/FeatureDialog'
 
 export default function Dashboard() {
     const [activeKey, setActiveKey] = React.useState("#dash")
+
+    const [show,setShow] = React.useState({
+        status:false,
+        type:null
+    })
+    const addListing = ()=> {
+        setShow({
+            status:true,
+            type:"addProduct"
+        })
+    }
     const onMenuClick = (name)=> {
         setActiveKey(name)
     }
@@ -60,10 +72,10 @@ export default function Dashboard() {
                         <Tab.Content
                             activeKey={activeKey}
                             defaultActiveKey="#dash"
-                            mountOnEnter={true}
                         >
                             <GreetingsCard 
                                 name="firstname lastname"
+                                onAddListing={addListing}
                             />
                             <Tab.Pane eventKey="#dash">
                                 <Dash />
@@ -84,6 +96,14 @@ export default function Dashboard() {
                     </Col>
                 </Row>
             </Tab.Container>
+            <FeatureDialog 
+                type={show.type}
+                show={show.status}
+                handleClose={()=>setShow({
+                    status:false,
+                    type:null
+                })}
+            />
         </Container>
     )
 }
