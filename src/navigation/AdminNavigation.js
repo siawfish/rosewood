@@ -8,9 +8,11 @@ import {
 import AdminAuth from '../pages/admin/AdminAuth'
 import AdminRegister from '../pages/admin/AdminRegister'
 import Dashboard from '../pages/admin/Dashboard'
+import { useSelector } from 'react-redux'
 
 export default function AdminNavigation() {
     let location = useLocation()
+    const { isAuthenticated } = useSelector(state=>state.app)
     React.useEffect(() => {
         if(location.pathname.match('/admin')){
             document.body.style.backgroundColor = "#555"
@@ -20,17 +22,20 @@ export default function AdminNavigation() {
     })
     return (
         <Router>
-            <Switch>
+            {
+                isAuthenticated ?
                 <Route exact path="/admin">
-                    <AdminAuth />
-                </Route>
-                <Route path="/admin/register">
-                    <AdminRegister />
-                </Route>
-                <Route path="/admin/dashboard">
                     <Dashboard />
-                </Route>
-            </Switch>
+                </Route> :
+                <Switch>
+                    <Route exact path="/admin">
+                        <AdminAuth />
+                    </Route>
+                    <Route path="/admin/register">
+                        <AdminRegister />
+                    </Route>
+                </Switch>
+            }
         </Router>
     )
 }

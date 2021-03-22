@@ -32,18 +32,18 @@ body {
 }
 
 button {
-  background-color: #8e1fc2!important;
+  background-color: #5A995A!important;
   border: 0!important;
   outline: none!important;
   color: #ffffff!important;
 }
 
 a {
-  color: #8e1fc2;
+  color: #5A995A;
 }
 
 a:hover {
-  color: #8e1fc28a;
+  color: #5A995A8a;
 }
 
 button:active {
@@ -59,7 +59,7 @@ button:active {
 }
 
 .inAdmin .navbar-brand {
-  color: #8e1fc2;
+  color: #5A995A;
 }
 
 .navbar-text {
@@ -69,15 +69,15 @@ button:active {
 }
 
 .navbar-text:hover {
-  color: #8e1fc2;
+  color: #5A995A;
 }
 
 .navbar-text span {
-  color: #8e1fc2;
+  color: #5A995A;
 }
 
 .navbar-text span:hover {
-  color: #8e1fc275;
+  color: #5A995A75;
 }
 
 .hero {
@@ -174,6 +174,10 @@ button:active {
 .logo, .navbar-brand {
   font-family: 'Unica One', cursive;
   font-size: 40px;
+}
+
+.navbar-brand img {
+  width: 150px;
 }
 
 .fadedBlue {
@@ -291,7 +295,7 @@ button:active {
 }
 
 .item .card-title {
-  color: #8e1fc2;
+  color: #7e7185;
 }
 
 .listContainer {
@@ -317,7 +321,7 @@ button:active {
 
 .propertySearch input:focus {
   outline: none;
-  border: 2px solid #8e1fc2;
+  border: 2px solid #5A995A;
 }
 
 .filterRow {
@@ -335,7 +339,7 @@ button:active {
 
 .filterRow button {
   background-color: transparent!important;
-  color: #8e1fc2!important;
+  color: #5A995A!important;
   border: 1px solid #f0f0f0!important;
   outline: none!important;
   margin-right: 5px;
@@ -350,26 +354,26 @@ button:active {
 }
 
 .dropdown-item {
-  border-bottom: 1px solid #8e1fc263;
+  border-bottom: 1px solid #5A995A63;
   font-weight: 300;
   padding-left: 5px;
 }
 
 
 .filterRow button:hover {
-  background-color: #8e1fc2;
-  border: 1px solid #8e1fc2;
+  background-color: #5A995A;
+  border: 1px solid #5A995A;
   outline: none!important;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus,
 .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
-  box-shadow:#8e1fc2;
+  box-shadow:#5A995A;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
-  background-color: #8e1fc2;
-  border: 1px solid #8e1fc2;
+  background-color: #5A995A;
+  border: 1px solid #5A995A;
   outline: none!important;
 }
 
@@ -407,19 +411,19 @@ button:active {
 }
 
 .item .stats span {
-  color: #8e1fc2;
+  color: #5A995A;
   font-size: medium;
 }
 
 .borderBtn {
   background-color: transparent!important;
-  border: 1px solid #8e1fc2!important;
-  color: #8e1fc2!important;
+  border: 1px solid #5A995A!important;
+  color: #5A995A!important;
 }
 
 .bubble {
   position: relative;
-  background: #8e1fc2;
+  background: #5A995A;
   color: #FFFFFF;
   font-family: Arial;
   font-size: 20px;
@@ -439,7 +443,7 @@ button:active {
   width: 0;
   z-index: 1;
   border-style: solid;
-  border-color: #8e1fc2 transparent;
+  border-color: #5A995A transparent;
   border-width: 10px 10px 0;
   bottom: -10px;
   left: 50%;
@@ -499,7 +503,7 @@ button:active {
 }
 
 .contact .contactCard .left {
-  background-color: #8e1fc2;
+  background-color: #5A995A;
   border-radius: 8px;
   padding: 5%;
   color: #ffffff;
@@ -541,20 +545,20 @@ button:active {
 
 .contact .contactCard .right input {
   border: none;
-  border-bottom: 1px solid #8e1fc2;
+  border-bottom: 1px solid #5A995A;
   border-radius: 0;
   height: 50px;
   font-size: small;
 }
 
 .contact .contactCard .right label {
-  color: #8e1fc2;
+  color: #5A995A;
   font-size: small;
 }
 
 .contact .contactCard .right textarea {
   border: none;
-  border-bottom: 1px solid #8e1fc2;
+  border-bottom: 1px solid #5A995A;
   border-radius: 0;
   font-size: small;
 }
@@ -604,12 +608,12 @@ button:active {
 }
 
 .dashboard .list-group-item.active {
-  background-color: #8e1fc2;
-  border-color: #8e1fc2;
+  background-color: #5A995A;
+  border-color: #5A995A;
 }
 
 .dashboard .list-group-item:hover {
-  background-color: #8e1fc263;
+  background-color: #5A995A63;
 }
 
 .dashcard .addProduct {
@@ -744,6 +748,7 @@ button:active {
 .modal-content input {
   height: 50px;
   background-color: #555;
+  color: #f0f0f0!important;
 }
 
 .modal-content textarea {
@@ -752,7 +757,7 @@ button:active {
 
 .modal-content input:focus {
   background-color: #555;
-  border-color: #8e1fc2;
+  border-color: #5A995A;
 }
 
 .modal-content label {
@@ -839,11 +844,11 @@ button:active {
 }
 
 .list .card-body {
-  background-color: #8e1fc263;
+  background-color: #5A995A63;
 }
 
 .details {
-  color: #8e1fc2;
+  color: #5A995A;
   font-size: small;
   font-weight: 600;
   text-transform: capitalize;
@@ -896,4 +901,11 @@ button:active {
   border: none;
   border-radius: 8px;
   color: #dbd8ff;
+}
+
+.err {
+  font-size: small;
+  color: red;
+  text-align: center;
+  margin-bottom: 20px;
 }

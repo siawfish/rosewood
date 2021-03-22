@@ -25,7 +25,7 @@ const AppStore = createSlice({
         },
         resetAppStore() {
             return initialState;
-        },
+        }
     }
 });
 
