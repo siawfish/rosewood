@@ -4,6 +4,8 @@ import List from './List'
 import { API } from '../utils/config'
 import { useDispatch, useSelector } from 'react-redux'
 import { setListings } from '../redux/listingsStore/listingsStore'
+import Feedback from './Feedback'
+import { FcCancel } from 'react-icons/fc'
 
 export default function Listings() {
     const dispatch = useDispatch()
@@ -22,6 +24,7 @@ export default function Listings() {
     return (
         <Container className="conWrapper">
             {
+                !listings.length <1 ?
                 listings?.map((list,i)=>{
                     return (
                         <List 
@@ -29,7 +32,12 @@ export default function Listings() {
                             list={list} 
                         />
                     )
-                })
+                }) :
+                <Feedback 
+                    messageStyle={{color:"#f0f0f0"}}
+                    message="No listings yet"
+                    icon={<FcCancel />}
+                />
             }
         </Container>
     )

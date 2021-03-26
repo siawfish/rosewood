@@ -117,6 +117,7 @@ export default function AddListingForm({
             setIsLoading(false)
             return
         }
+        const amenitiesArr = listingDetails.amenities.split(',')
         let form = new FormData()
         form.append('title', listingDetails.title)
         form.append('category', listingDetails.category)
@@ -128,7 +129,7 @@ export default function AddListingForm({
         form.append('bedrooms', listingDetails.bedrooms)
         form.append('featuredListing', listingDetails.featuredListing)
         form.append('type', listingDetails.type)
-        form.append('amenities', listingDetails.amenities)
+        form.append('amenities', amenitiesArr)
         form.append('area', listingDetails.area)
         form.append('location', listingDetails.location)
         images.forEach(img=>{
@@ -294,7 +295,7 @@ export default function AddListingForm({
                             />
                         </Form.Group>
                         <Form.Group as={Col} controlId="formPrice">
-                            <Form.Label>Price</Form.Label>
+                            <Form.Label>Price{listingDetails.type==="rent"&&<sup> per Month</sup>}</Form.Label>
                             <Form.Control 
                                 type="number" 
                                 placeholder="200,000" 

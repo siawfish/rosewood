@@ -8,8 +8,10 @@ import hse2 from '../../assets/img/hse2.jpg';
 import hse3 from '../../assets/img/hse3.jpg';
 import hse4 from '../../assets/img/hse4.jpg';
 import hse5 from '../../assets/img/hse5.jpg';
+import { useSelector } from 'react-redux'
 
 export default function Properties() {
+    const { listings } = useSelector(state => state.listings)
     const property = [
         {
             caption:"Some quick example text to build on the card title and make up the bulk of the card's content.",
@@ -52,6 +54,7 @@ export default function Properties() {
             lng:-0.4253
         }
     ]
+    console.log(listings);
     return (
         <Container className="properties" fluid>
             <Row>
