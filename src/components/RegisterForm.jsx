@@ -30,7 +30,7 @@ export default function RegisterForm() {
             return false
         }
         if(!formDetails.lastName.match(/^[a-zA-Z_-]{3,15}$/)){
-            setErr("Kindly enter a valid first name")
+            setErr("Kindly enter a valid last name")
             return false
         }
         if(!formDetails.email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) || !formDetails.email.match("@rosewood.com")){

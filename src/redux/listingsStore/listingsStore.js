@@ -11,6 +11,9 @@ const ListingsStore = createSlice({
         setListings(state, action) {
             state.listings = action.payload;
         },
+        addListings(state, action) {
+            state.listings = state.listings ? [...state.listings, action.payload] : [action.payload];
+        },
         updateListings(state, action){
             state.listings = [...state.listings, action.payload];
         }
@@ -19,7 +22,8 @@ const ListingsStore = createSlice({
 
 export const {
     setListings,
-    updateListings
+    updateListings,
+    addListings
 } = ListingsStore.actions;
 
 export const listingsReducer = ListingsStore.reducer;

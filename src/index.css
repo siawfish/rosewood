@@ -176,8 +176,12 @@ button:active {
   font-size: 40px;
 }
 
-.navbar-brand img {
+.navbar-brand img, .logo img {
   width: 150px;
+}
+
+.logo img {
+  margin-bottom: 40px;
 }
 
 .fadedBlue {
@@ -669,14 +673,12 @@ button:active {
 }
 
 .addressForm .successMessage {
-  position: absolute;
-  top: 35%;
-  z-index: 5;
+  margin-top: 15%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #190bc4;
+  color: white;
   font-weight: 700;
   font-size: large;
 }
@@ -713,28 +715,6 @@ button:active {
   text-align: center;
 }
 
-/* .addressForm {
-  padding: 2% 10%;
-} */
-
-.addressForm .successMessage .icon {
-  font-size: 80px;
-  color: #fff;
-}
-
-.addressForm .successMessage {
-  position: absolute;
-  top: 35%;
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #190bc4;
-  font-weight: 700;
-  font-size: large;
-}
-
 .modal-content {
   border-radius: 26px!important;
   background-color: #555;
@@ -749,13 +729,33 @@ button:active {
   height: 50px;
   background-color: #555;
   color: #f0f0f0!important;
+  font-weight: 300;
+  font-size: small;
+}
+
+.modal-content input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  border-radius: 8px!important;
+}
+
+.modal-content input[type=checkbox]:checked {
+  background-color: #5A995A!important;
 }
 
 .modal-content textarea {
   background-color: #555;
+  color: #f0f0f0!important;
+  font-weight: 300;
+  font-size: small;
 }
 
 .modal-content input:focus {
+  background-color: #555;
+  border-color: #5A995A;
+}
+
+.modal-content textarea:focus {
   background-color: #555;
   border-color: #5A995A;
 }
@@ -908,4 +908,27 @@ button:active {
   color: red;
   text-align: center;
   margin-bottom: 20px;
+}
+
+.text-muted {
+  color: #5A995A!important;
+  font-weight: 300;
+}
+.feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+.feedback .icon {
+  font-size: 80px;
+  color: #5A995A;
+}
+
+.feedback .text {
+  font-weight: 300;
+  padding: 0 20%;
+  text-align: center;
 }

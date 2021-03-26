@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa'
 import { Link, useLocation } from 'react-router-dom'
+import logo from '../assets/img/logo.png'
 
 export default function Footer() {
     const location = useLocation()
@@ -11,7 +12,9 @@ export default function Footer() {
             <Container fluid className="footerContainer">
                 <Row>
                     <Col lg={5}>
-                        <div className="logo">Rosewood</div>
+                        <div className="logo">
+                            <img src={logo} alt="" />
+                        </div>
                         <p>
                             Quis dolor laboris sunt ex excepteur laborum elit. Aliquip voluptate dolor officia amet sunt aliqua. 
                             Ex minim cupidatat nulla amet mollit sit excepteur aute consequat cillum. Minim do reprehenderit 

@@ -4,6 +4,7 @@ import { FaRegEdit, FaTrashAlt } from 'react-icons/fa'
 import { IoMdEye } from 'react-icons/io'
 import Thumbnail from './Thumbnail'
 import dayjs from 'dayjs'
+import { baseUrl } from '../utils/data'
 // import { baseURL } from '../../assets/utils/constants'
 
 export default function List({
@@ -16,7 +17,7 @@ export default function List({
                     <Card className="list" style={{marginBottom:10}}>
                         <Card.Header  className="inventory" eventKey="0">
                             <div className="left">
-                                <img src={list?.images[0]} alt="" />
+                                <img src={baseUrl+'/listings/image/'+list?.images[0]} alt="" />
                                 <div className="info">
                                     <div className="name">
                                         {list?.title}
@@ -59,7 +60,7 @@ export default function List({
                                                         return (
                                                             <Thumbnail 
                                                                 key={"image-"+i}
-                                                                img={image}  
+                                                                img={baseUrl+'/listings/image/'+image}  
                                                             />
                                                         )
                                                     })
@@ -78,11 +79,6 @@ export default function List({
                                                 <Col lg={4}>
                                                     <div className="details">
                                                         Added on: <br/><span>{dayjs(list?.createdAt).format('DD/MM/YYYY')}</span>
-                                                    </div>
-                                                </Col>
-                                                <Col lg={4}>
-                                                    <div className="details">
-                                                        Updated by: <br/><span>{list?.updatedBy.name}</span>
                                                     </div>
                                                 </Col>
                                                 <Col lg={4}>

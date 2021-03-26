@@ -24,14 +24,6 @@ export default function AddressForm({
         instagram:address?.instagram,
     })
     const [success, setSuccess] = React.useState(false)
-
-    React.useEffect(()=>{
-        API.get('/admin/website?id=CddADmRqXDTKiXSA4pUy')
-        .then((res)=>{
-            dispatch(setAddress(res.data?.info.address))
-        })
-        .catch(e=>console.log(e))
-    })
     
     const resetState = ()=> {
         setAddressDetails({
