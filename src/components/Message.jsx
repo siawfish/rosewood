@@ -18,7 +18,7 @@ export default function User({
                             <div style={{color:message.read?"#333":undefined}} className="block">
                                 <FaUser />
                                 <div className="name">
-                                    {message?.sender}
+                                    {message?.firstName+" "+message?.lastName}
                                 </div>
                             </div>
                             <div className="block">
@@ -29,7 +29,7 @@ export default function User({
                                 </Accordion.Toggle>
                                 <button>
                                     {
-                                        message.read ? 
+                                        message?.read ? 
                                         <MdEmail /> :
                                         <HiOutlineMailOpen />    
                                     }
@@ -54,7 +54,7 @@ export default function User({
                                     </Col>
                                     <Col lg={4}>
                                         <div className="details">
-                                            Sent At: <br/><span>{dayjs(message?.sentAt).format('DD/MM/YYYY')}</span>
+                                            Sent At: <br/><span>{dayjs.unix(message?.sentAt?.seconds).format('DD/MM/YYYY')}</span>
                                         </div>
                                     </Col>
                                 </Row>

@@ -22,7 +22,7 @@ export default function Listings() {
     return (
         <Container className="conWrapper">
             {
-                listings.map((list,i)=>{
+                listings?.map((list,i)=>{
                     return (
                         <List 
                             key={"list-"+i} 
