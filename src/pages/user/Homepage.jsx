@@ -15,7 +15,6 @@ export default function Homepage() {
         const getListings = ()=> {
             API.get('/listings')
             .then(res=> {
-                console.log(res);
                 if(res.ok){
                     dispatch(setListings(res.data.listings))
                 } else {
@@ -44,7 +43,7 @@ export default function Homepage() {
 
     
 
-    const featuredListings = listings.filter(list=>{
+    const featuredListings = listings?.filter(list=>{
         return list.featuredListing === "true"
     })
 
