@@ -4,7 +4,7 @@ import img3 from '../assets/img/hse3.jpg'
 import img4 from '../assets/img/hse4.jpg'
 import img5 from '../assets/img/hse5.jpg'
 
-export const baseUrl = 'https://rosewoodgh.herokuapp.com/'
+export const baseUrl = 'https://rosewoodgh.herokuapp.com/api'
 // 'http://localhost:8080/api'
 
 export const listings = [

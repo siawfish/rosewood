@@ -15,6 +15,7 @@ export default function Homepage() {
         const getListings = ()=> {
             API.get('/listings')
             .then(res=> {
+                console.log(res);
                 if(res.ok){
                     dispatch(setListings(res.data.listings))
                 } else {
