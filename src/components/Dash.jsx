@@ -20,7 +20,7 @@ export default function Dash() {
                             color:"#f0f0f0"
                         }}
                         statsContainerStyle={{
-                            backgroundColor:"#8e1fc263",
+                            backgroundColor:"#5A995A63",
                             color:"#f0f0f0"
                         }}
                     />
@@ -39,7 +39,7 @@ export default function Dash() {
                             color:"#f0f0f0"
                         }}
                         statsContainerStyle={{
-                            backgroundColor:"#8e1fc263",
+                            backgroundColor:"#5A995A63",
                             color:"#f0f0f0"
                         }}
                     />
@@ -58,7 +58,7 @@ export default function Dash() {
                             color:"#f0f0f0"
                         }}
                         statsContainerStyle={{
-                            backgroundColor:"#8e1fc263",
+                            backgroundColor:"#5A995A63",
                             color:"#f0f0f0"
                         }}
                     />
@@ -77,7 +77,7 @@ export default function Dash() {
                             color:"#f0f0f0"
                         }}
                         statsContainerStyle={{
-                            backgroundColor:"#8e1fc263",
+                            backgroundColor:"#5A995A63",
                             color:"#f0f0f0"
                         }}
                     />

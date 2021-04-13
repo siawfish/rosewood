@@ -10,7 +10,7 @@ export default function Users() {
     return (
         <Container className="conWrapper">
             {
-                !message.length<1 ?
+                !message?.length<1 ?
                 message?.map((message,i)=>{
                     return (
                         <Message 

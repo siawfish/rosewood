@@ -391,6 +391,11 @@ button:active {
   cursor: pointer;
 }
 
+.item img {
+  width: 100%;
+  height: 200px;
+}
+
 .item .title { 
   font-weight: 700;
   margin-bottom: 10px;
@@ -931,4 +936,16 @@ button:active {
   font-weight: 300;
   padding: 0 20%;
   text-align: center;
+}
+
+.property {
+  padding: 5%!important;
+}
+
+.property img {
+  width: 100%;
+}
+
+.property .thumbnails img {
+  margin-bottom: 10px;
 }

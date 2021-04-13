@@ -11,6 +11,7 @@ import Contactus from '../pages/user/Contactus';
 import Homepage from '../pages/user/Homepage'
 import Login from '../pages/user/Login';
 import Properties from '../pages/user/Properties';
+import Property from '../pages/user/Property';
 import Register from '../pages/user/Register';
 import AdminNavigation from './AdminNavigation'
 
@@ -27,6 +28,9 @@ export default function Navigation() {
                 </Route>
                 <Route exact path="/register">
                     <Register />
+                </Route>
+                <Route exact path="/property/:id">
+                    <Property />
                 </Route>
                 <Route exact path="/properties">
                     <Properties />

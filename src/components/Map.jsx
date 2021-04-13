@@ -16,15 +16,15 @@ export default function Map({
                     lng: -0.1870
                 }}
                 yesIWantToUseGoogleMapApiInternals
-                defaultZoom={11}
+                defaultZoom={14}
             >
                 {
                     places?.map((place, i)=>{
                         return (
                             <Marker 
                                 key={i}
-                                lat={place.lat}
-                                lng={place.lng}
+                                lat={place.cordinates.lat}
+                                lng={place.cordinates.lng}
                                 text={place.price}
                             />
                         )
