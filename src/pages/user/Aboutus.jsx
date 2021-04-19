@@ -13,12 +13,10 @@ export default function Aboutus() {
                             Making your home search less painful as possible
                         </div>
                         <p>
-                            Ea officia cillum laboris ex deserunt minim nisi velit cillum Lorem 
-                            incididunt est. Ex nostrud ad fugiat consectetur cupidatat nulla 
-                            elit cupidatat culpa dolor culpa amet. Ad nisi cupidatat non exercitation 
-                            consequat mollit irure non nisi culpa labore. Consequat ipsum nulla tempor 
-                            ipsum ut reprehenderit labore Lorem consequat ut. Culpa eu do in esse occaecat 
-                            et laborum sunt veniam. Eiusmod id nostrud ex laborum laboris aliqua.
+                            Simple, straightforward, professional. We understand the process of buying or selling can be  stressful, 
+                            so we work closely with our clients to make it as smooth as possible. We guide you through it all until 
+                            it is completed. We believe this is about you, so we listen to your needs and tailor make a service that’s 
+                            unique to every individual
                         </p>
                         <div className="bgWrapper">
                             <img src={bg} alt=""/>

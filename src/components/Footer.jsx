@@ -16,8 +16,10 @@ export default function Footer() {
                             <img src={logo} alt="" />
                         </div>
                         <p>
-                            Quis dolor laboris sunt ex excepteur laborum elit. Aliquip voluptate dolor officia amet sunt aliqua. 
-                            Ex minim cupidatat nulla amet mollit sit excepteur aute consequat cillum. Minim do reprehenderit 
+                            Simple, straightforward, professional. We understand the process of buying or selling can be  
+                            stressful, so we work closely with our clients to make it as smooth as possible. 
+                            We guide you through it all until it is completed. We believe this is about you, so we 
+                            listen to your needs and tailor make a service that’s unique to every individual
                         </p>
                     </Col>
                     <Col lg={2}>
@@ -50,7 +52,7 @@ export default function Footer() {
                 </Row>
                 <Row style={{marginTop:"5%",paddingBottom:"2%"}}>
                     <Col>
-                        <small>&#x000A9; 2020 Rosewood</small>
+                        <small>&#x000A9; {new Date().getFullYear()} Rosewood</small>
                     </Col>
                     <Col>
                         <div className="socialWrapper">
