@@ -5,6 +5,7 @@ import { FaShower } from 'react-icons/fa'
 import { baseUrl } from '../utils/data'
 import numeral from 'numeral'
 import { useHistory } from 'react-router-dom'
+import SaleType from './SaleType';
 
 export default function Item({
     property,
@@ -21,6 +22,9 @@ export default function Item({
     return (
         <Col style={containerStyle} sm={sm} lg={lg}>
             <Card onClick={gotoDetails} className="item">
+                <div style={{position:"absolute",top:10,left:10}}>
+                    <SaleType type={property?.type} />
+                </div>
                 <Card.Img variant="top" src={baseUrl+"/listings/image/"+property?.images[0]} />
                 <Card.Body>
                 <div className="priceRow">

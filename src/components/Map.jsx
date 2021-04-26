@@ -4,7 +4,11 @@ import Marker from './Marker';
 
 export default function Map({
     places,
-    containerStyle
+    containerStyle,
+    defaultCenter={
+        lat: 5.6037,
+        lng: -0.1870
+    }
 }) {
     return (
         <div style={containerStyle} className="mapContainer">
@@ -12,10 +16,7 @@ export default function Map({
                 bootstrapURLKeys={{ 
                     key: "AIzaSyAem1WtYucFJXW71DVMD6LK3g7z2cPZF9w" 
                 }}
-                defaultCenter={{
-                    lat: 5.6037,
-                    lng: -0.1870
-                }}
+                defaultCenter={defaultCenter}
                 yesIWantToUseGoogleMapApiInternals
                 defaultZoom={14}
             >

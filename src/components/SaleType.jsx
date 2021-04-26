@@ -29,7 +29,7 @@ export default function SaleType({
         }
     }
     return (
-        <div style={type==="rent"&&{backgroundColor:"orange"}} className="saleTypeWrapper">
+        <div style={type==="rent"?{backgroundColor:"orange"}:null} className="saleTypeWrapper">
             {
                 renderType()
             }

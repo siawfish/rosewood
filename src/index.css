@@ -968,6 +968,11 @@ button:active {
   margin-top: 3%;
 }
 
+.infoSection {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 40px;
+}
+
 .infoSection .titleSection .title {
   text-transform: capitalize;
   font-size: large;
@@ -983,6 +988,7 @@ button:active {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .infoSection .statsWrapper {
@@ -1010,9 +1016,47 @@ button:active {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 20px;
 }
 
 .saleType {
   margin-left: 5px;
+}
+
+.infoSection .heading {
+  font-size: large;
+  font-weight: 500;
+  margin: 40px 0 20px;
+}
+
+.infoSection .desc {
+  font-size: 15px;
+  color: #555;
+  font-weight: 300;
+}
+
+.priceCard {
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  -webkit-box-shadow: -2px 0px 9px 0px rgba(153,153,153,1);
+  -moz-box-shadow: -2px 0px 9px 0px rgba(153,153,153,1);
+  box-shadow: -2px 0px 9px 0px rgba(153,153,153,1);
+}
+
+.priceCard .title {
+  color: #555;
+  font-weight: 300;
+  margin: -20px;
+}
+
+.priceCard .amount {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.priceCard .amount small {
+  font-size: 14px;
+  color: #555;
 }
