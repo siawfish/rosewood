@@ -3,10 +3,11 @@ import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
 
 export default function Map({
-    places
+    places,
+    containerStyle
 }) {
     return (
-        <div className="mapContainer">
+        <div style={containerStyle} className="mapContainer">
             <GoogleMapReact
                 bootstrapURLKeys={{ 
                     key: "AIzaSyAem1WtYucFJXW71DVMD6LK3g7z2cPZF9w" 

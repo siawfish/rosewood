@@ -3,7 +3,10 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Map from '../../components/Map'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { baseUrl } from '../../utils/data'
+import ImageViewer from '../../components/ImageViewer'
+import { BiBed, BiCar } from 'react-icons/bi'
+import { FaShower } from 'react-icons/fa'
+import SaleType from '../../components/SaleType'
 
 export default function Property() {
     const { listings } = useSelector(state=>state.listings)
@@ -12,44 +15,50 @@ export default function Property() {
         return pro.id === id
     })
     const property = propertyArr[0]
+    console.log(property);
     return (
         <Container className="property" fluid>
             <Row>
                 <Col lg={10}>
-                    <Container className="listing">
-                        <Row>
-                            <Col style={{padding:0}}>
-                                {/* <Text 
-                                    text="East Cantoments, Accra, Ghana"
-                                    style={{color:"#777", marginBottom:20}}
-                                /> */}
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col style={{padding:0}} lg={10}>
-                                <img src={baseUrl+"/listings/image/"+property?.images[0]} alt="" />
-                            </Col>
-                            <Col lg={2}>
-                                <Container className="thumbnails">
-                                    <Row>
-                                        {
-                                            property?.images.map((pro, i)=>{
-                                                return (
-                                                    <Col key={"img-"+i} style={{padding:0}} lg={12}>
-                                                        <img src={baseUrl+"/listings/image/"+pro} alt="" />
-                                                    </Col>
-                                                )
-                                            })
-                                        }
-                                    </Row>
-                                </Container>
-                            </Col>
-                        </Row>
-                    </Container>
+                    <ImageViewer property={property} />
                 </Col>
                 <Col style={{padding:0}} lg={2}>
-                   <Map />
+                    <Map containerStyle={{height:670}} />
                 </Col>
+            </Row>
+            <Row>
+                <Container className="propertyInfo">
+                    <Row>
+                        <Col lg={8}>
+                            <div className="infoSection">
+                                <div className="titleSection">
+                                    <div className="title">{`${property.title.toLowerCase()} by ${property.developer}`}</div>
+                                        <div className="statsContainer">
+                                            <div className="statsWrapper">
+                                                <div className="stats">
+                                                    <span><BiBed /></span> {property?.bedrooms}
+                                                </div>
+
+                                                <div className="stats">
+                                                    <span><FaShower /></span> {property?.bathrooms}
+                                                </div>
+
+                                                <div className="stats">
+                                                    <span><BiCar /></span> {property?.parkingSpace}
+                                                </div>
+                                            </div>
+
+                                            <SaleType type={property?.type} />
+                                        </div>
+                                    </div>
+
+                            </div>
+                        </Col>
+                        <Col lg={4}>
+                            Price section
+                        </Col>
+                    </Row>
+                </Container>
             </Row>
         </Container>
     )

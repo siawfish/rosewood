@@ -39,22 +39,20 @@ export default function Aboutus() {
                 </Row>
                 <Row>
                     <Col>
-                        <div className="boldText">
-                            Minim laborum nulla adipisicing irure ut anim cillum sunt anim esse.
-                        </div>
                         <div>
-                            <small>Irure anim nulla adipisicing sunt ea consequat pariatur incididunt veniam occaecat exercitation nulla in et.</small>
+                            <small>
+                                Accra has become a home for millions of people from all over the world, and every year there is more and 
+                                more diasporas and foreigners coming to Ghana to make a home for themselves. Most of these people do not 
+                                know where to start so here at Rosewood we simplify everything for you by guiding you through the process 
+                                from finding a home, an office, acquiring Land and documentation.
+                            </small>
                         </div>
                     </Col>
                     <Col>
-                        <div className="boldText">
-                            Nostrud dolor aliqua duis nostrud.
-                        </div>
                         <div>
                             <small>
-                                Cupidatat irure enim deserunt consectetur dolore aliqua nisi reprehenderit esse enim. 
-                                Sint ullamco excepteur fugiat commodo deserunt laborum anim culpa voluptate commodo 
-                                laborum occaecat Lorem. Occaecat laboris magna nostrud consequat non.
+                                If it’s anything to do with Real Estate, we have the answer. Our advise to you is to inform us 
+                                of every little thing to find the right solution for you.
                             </small>
                         </div>
                     </Col>

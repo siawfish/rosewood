@@ -939,7 +939,7 @@ button:active {
 }
 
 .property {
-  padding: 5%!important;
+  padding: 5% 10%!important;
 }
 
 .property img {
@@ -948,4 +948,71 @@ button:active {
 
 .property .thumbnails img {
   margin-bottom: 10px;
+}
+
+.property .thumbnails {
+  height: 670px;
+  overflow: auto;
+}
+
+.listing {
+  padding: 0!important;
+}
+
+.listing .imageView {
+  border-radius: 8px;
+  height: 670px;
+}
+
+.propertyInfo {
+  margin-top: 3%;
+}
+
+.infoSection .titleSection .title {
+  text-transform: capitalize;
+  font-size: large;
+}
+
+.infoSection .titleSection .caption {
+  color: #404040;
+  font-size: small;
+}
+
+.infoSection .statsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.infoSection .statsWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.infoSection .stats {
+  padding-right: 10px;
+  font-size: small;
+}
+
+.infoSection .stats span {
+  color: #5A995A;
+  font-size: medium;
+}
+
+.saleTypeWrapper {
+  padding: 5px 15px;
+  background-color: #5A995A;
+  border-radius: 8px;
+  color: white;
+  font-size: small;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.saleType {
+  margin-left: 5px;
 }
