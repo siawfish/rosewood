@@ -2,14 +2,30 @@ import React from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import ButtonDropdown from './ButtonDropdown'
 import Slider from "react-slick";
-import cr1 from '../assets/img/cr1.jpg'
-import cr2 from '../assets/img/cr2.jpg'
-import cr3 from '../assets/img/cr3.jpg'
-import cr4 from '../assets/img/cr4.jpg'
-import cr5 from '../assets/img/cr5.jpg'
-import cr6 from '../assets/img/cr6.jpg'
+import cr1 from '../assets/img/bg1.jpeg'
+import cr2 from '../assets/img/bg2.jpeg'
+import cr3 from '../assets/img/bg3.jpeg'
+import cr4 from '../assets/img/bg4.jpeg'
+import cr5 from '../assets/img/bg5.jpeg'
+import cr6 from '../assets/img/bg6.jpeg'
+import cr7 from '../assets/img/bg7.jpeg'
+import cr8 from '../assets/img/bg8.jpeg'
+import cr9 from '../assets/img/bg9.jpeg'
+
 
 export default function Hero() {
+
+    const images = [
+        cr1,
+        cr2,
+        cr3,
+        cr4,
+        cr5,
+        cr6,
+        cr7,
+        cr8,
+        cr9
+    ]
     
     const settings = {
         infinite: true,
@@ -45,24 +61,15 @@ export default function Hero() {
     return (
         <Container fluid className="hero">
              <Slider {...settings}>
-                <div>
-                    <img src={cr1} alt="" />
-                </div>
-                <div>
-                    <img src={cr2} alt="" />
-                </div>
-                <div>
-                    <img src={cr3} alt="" />
-                </div>
-                <div>
-                    <img src={cr4} alt="" />
-                </div>
-                <div>
-                    <img src={cr5} alt="" />
-                </div>
-                <div>
-                    <img src={cr6} alt="" />
-                </div>
+                 {
+                     images.map((image,i)=>{
+                         return (
+                            <div>
+                                <img key={`key-${i}`} src={image} alt="" />
+                            </div>
+                         )
+                     })
+                 }
             </Slider>
             <div className="heroContentWrapper">
                 <Row>
