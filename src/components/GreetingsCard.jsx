@@ -14,17 +14,11 @@ export default function GreetingsCard({
     }
     return (
         <Jumbotron>
-            <h5>Hello, {profile?.displayName}!</h5>
             <p>
-                <small>
-                    This is a simple hero unit, a simple jumbotron-style component for calling
-                    extra attention to featured content or information.
-                </small>
+                <h5>Hello, {profile?.displayName}!</h5>
             </p>
-            <div>
-                <Button style={{marginRight:20}} onClick={logout} variant="primary">Logout</Button>
-                <Button onClick={onAddListing} variant="primary">Add Listing</Button>
-            </div>
+            <Button style={{marginRight:20}} onClick={logout} variant="primary">Logout</Button>
+            <Button onClick={onAddListing} variant="primary">Add Listing</Button>
         </Jumbotron>
     )
 }

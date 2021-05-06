@@ -1,14 +1,13 @@
 import React from 'react'
-import { Navbar, Button } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router-dom';
 import logo from '../assets/img/logo.png'
+import { ImPhone } from 'react-icons/im'
 
 export default function Nav() {
     const history = useHistory()
     const location = useLocation()
-    const gotoLogin = ()=> {
-        history.push('/login')
-    }
+
     const gotoProperties = ()=> {
         history.push('/properties')
     }
@@ -26,9 +25,6 @@ export default function Nav() {
             </Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">
-                <Navbar.Text onClick={gotoProperties}>
-                    Call us on: <span>+233 24 793 8888</span>
-                </Navbar.Text>
                 <Navbar.Text style={path.match('/properties')&&{color:'#5A995A'}} onClick={gotoProperties}>
                     Properties
                 </Navbar.Text>
@@ -38,12 +34,9 @@ export default function Nav() {
                 <Navbar.Text style={path.match('/contactus')&&{color:'#5A995A'}} onClick={gotoContactus}>
                     Contact Us
                 </Navbar.Text>
-                {
-                    !path.match('/admin') &&
-                    <Button className="borderBtn" onClick={gotoLogin}>
-                        Login
-                    </Button>
-                }
+                <Navbar.Text>
+                    <ImPhone /> : <span>+233 24 793 8888 / +44 743 758 6493</span>
+                </Navbar.Text>
             </Navbar.Collapse>
         </Navbar>
     )

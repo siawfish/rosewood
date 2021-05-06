@@ -17,7 +17,7 @@ export default function Properties() {
             setSearch(key)
         }
     },[])
-    console.log("key>>>>", key);
+    
     React.useEffect(() => {
         if(search!==""){
             let displayListings = listings.filter(list=>{
