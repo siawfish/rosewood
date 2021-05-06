@@ -18,8 +18,7 @@ export default function IntroCard({
                 </div>
                 <Card.Subtitle className="mb-2 bolderText">Search</Card.Subtitle>
                 <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
+                    Search through our wide catalog of property listings within Ghana.
                 </Card.Text>
             </Card.Body>
         )
@@ -32,8 +31,7 @@ export default function IntroCard({
                 </div>
                 <Card.Subtitle className="mb-2 bolderText">Booking</Card.Subtitle>
                 <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
+                    Found what you are looking for? Contact us to book a viewing appointment.
                 </Card.Text>
             </Card.Body>
         )
@@ -46,8 +44,7 @@ export default function IntroCard({
                 </div>
                 <Card.Subtitle className="mb-2 bolderText">Payment</Card.Subtitle>
                 <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
+                    Like what you saw? Make payment through our several convenient and safe payment methods.
                 </Card.Text>
             </Card.Body>
         )
@@ -60,8 +57,7 @@ export default function IntroCard({
                 </div>
                 <Card.Subtitle className="mb-2 bolderText">Move In</Card.Subtitle>
                 <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
+                    After successful payment you get to move into your new home. Very easy and convenient.
                 </Card.Text>
             </Card.Body>
         )

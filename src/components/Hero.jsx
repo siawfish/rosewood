@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
-import ButtonDropdown from './ButtonDropdown'
+import { useHistory } from 'react-router-dom'
 import Slider from "react-slick";
 import cr1 from '../assets/img/bg1.jpeg'
 import cr2 from '../assets/img/bg2.jpeg'
@@ -14,6 +14,8 @@ import cr9 from '../assets/img/bg9.jpeg'
 
 
 export default function Hero() {
+    const history = useHistory()
+    const [search, setSearch] = React.useState("")
 
     const images = [
         cr1,
@@ -58,6 +60,15 @@ export default function Hero() {
             }
         ]
     }
+
+    const onTextInput = (e)=> {
+        setSearch(e.target.value)
+    }
+
+    const gotoProperties = ()=> {
+        history.push(`/properties/${search}`)
+    }
+
     return (
         <Container fluid className="hero">
              <Slider {...settings}>
@@ -76,9 +87,8 @@ export default function Hero() {
                     <Col sm={12} lg={12}>
                         <div className="heroContent">
                             <div className="searchForm">
-                                <ButtonDropdown />
-                                <input placeholder="search for locality, landmark or project" />
-                                <Button className="searchButton">&#128269; Search</Button>
+                                <input onChange={onTextInput} placeholder="search for locality, landmark or project" />
+                                <Button onClick={gotoProperties} disabled={search.length<3} className="searchButton">&#128269; Search</Button>
                             </div>
                         </div>
                     </Col>

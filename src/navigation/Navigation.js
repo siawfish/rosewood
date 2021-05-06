@@ -32,7 +32,7 @@ export default function Navigation() {
                 <Route exact path="/property/:id">
                     <Property />
                 </Route>
-                <Route exact path="/properties">
+                <Route exact path="/properties/:key?">
                     <Properties />
                 </Route>
                 <Route exact path="/aboutus">
