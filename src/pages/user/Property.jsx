@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Card, Button } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import Map from '../../components/Map'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
@@ -7,7 +7,7 @@ import ImageViewer from '../../components/ImageViewer'
 import { BiBed, BiCar } from 'react-icons/bi'
 import { FaShower } from 'react-icons/fa'
 import SaleType from '../../components/SaleType'
-import numeral from 'numeral'
+import PriceCard from '../../components/PriceCard'
 
 export default function Property() {
     const { listings } = useSelector(state=>state.listings)
@@ -20,7 +20,7 @@ export default function Property() {
     return (
         <Container className="property" fluid>
             <Row>
-                <Col lg={10}>
+                <Col sm={12} lg={10}>
                     <ImageViewer property={property} />
                 </Col>
                 <Col style={{padding:0}} lg={2}>
@@ -83,13 +83,7 @@ export default function Property() {
                             </div>
                         </Col>
                         <Col lg={4}>
-                            <Card className="priceCard">
-                                <div className="title">Price</div>
-                                <div className="amount">&#8373; {numeral(property?.price).format('0,0')}{property?.type==="rent"&&<small>/month</small>}</div>
-                                <Button block>
-                                    Register interest
-                                </Button>
-                            </Card>
+                            <PriceCard property={property} price={property?.price} type={property?.type} />
                         </Col>
                     </Row>
                 </Container>

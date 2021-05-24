@@ -12,46 +12,46 @@ export default function ContactForm({
         <Form>
             <div className="err">{err}</div>
             <Form.Row>
-                <Form.Group as={Col} controlId="formGridEmail">
-                <Form.Label>First name</Form.Label>
-                <Form.Control 
-                    type="text" 
-                    placeholder="John" 
-                    defaultValue={formDetails.firstName}
-                    onChange={(e)=>onChange("firstName", e)}
-                />
+                <Form.Group sm={12} as={Col} controlId="formGridEmail">
+                    <Form.Label>First name</Form.Label>
+                    <Form.Control 
+                        type="text" 
+                        placeholder="John" 
+                        defaultValue={formDetails.firstName}
+                        onChange={(e)=>onChange("firstName", e)}
+                    />
                 </Form.Group>
 
-                <Form.Group as={Col} controlId="formGridPassword">
-                <Form.Label>Last name</Form.Label>
-                <Form.Control 
-                    type="text" 
-                    placeholder="Doe" 
-                    defaultValue={formDetails.lastName}
-                    onChange={(e)=>onChange("lastName", e)}
-                />
+                <Form.Group sm={12} as={Col} controlId="formGridPassword">
+                    <Form.Label>Last name</Form.Label>
+                    <Form.Control 
+                        type="text" 
+                        placeholder="Doe" 
+                        defaultValue={formDetails.lastName}
+                        onChange={(e)=>onChange("lastName", e)}
+                    />
                 </Form.Group>
             </Form.Row>
 
             <Form.Row>
-                <Form.Group as={Col} controlId="formGridEmail">
-                <Form.Label>Email</Form.Label>
-                <Form.Control 
-                    type="email" 
-                    placeholder="xyz@mail.com" 
-                    defaultValue={formDetails.email}
-                    onChange={(e)=>onChange("email", e)}
-                />
+                <Form.Group sm={12} as={Col} controlId="formGridEmail">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control 
+                        type="email" 
+                        placeholder="xyz@mail.com" 
+                        defaultValue={formDetails.email}
+                        onChange={(e)=>onChange("email", e)}
+                    />
                 </Form.Group>
 
-                <Form.Group as={Col} controlId="formGridPassword">
-                <Form.Label>Phone</Form.Label>
-                <Form.Control 
-                    type="number" 
-                    placeholder="+233 050 000 0000" 
-                    defaultValue={formDetails.phone}
-                    onChange={(e)=>onChange("phone", e)}
-                />
+                <Form.Group sm={12} as={Col} controlId="formGridPassword">
+                    <Form.Label>Phone</Form.Label>
+                    <Form.Control 
+                        type="number" 
+                        placeholder="+233 050 000 0000" 
+                        defaultValue={formDetails.phone}
+                        onChange={(e)=>onChange("phone", e)}
+                    />
                 </Form.Group>
             </Form.Row>
 

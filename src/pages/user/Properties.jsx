@@ -16,7 +16,7 @@ export default function Properties() {
         if(key){
             setSearch(key)
         }
-    },[])
+    },[key])
     
     React.useEffect(() => {
         if(search!==""){

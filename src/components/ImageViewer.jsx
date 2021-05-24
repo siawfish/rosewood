@@ -25,16 +25,21 @@ export default function ImageViewer({
     return (
         <Container fluid className="listing">
             <Row>
-                <Col onClick={()=>setOpenViewer(true)} style={{padding:0}} lg={10}>
-                    <img className="imageView" src={baseUrl+"/listings/image/"+property?.images[active]} alt="" />
+                <Col sm={12} onClick={()=>setOpenViewer(true)} style={{padding:0}} lg={10}>
+                    <div className="imageView">
+                        <img src={baseUrl+"/listings/image/"+property?.images[active]} alt="" />
+                        <div className="count">
+                            {images.length}
+                        </div>
+                    </div>
                 </Col>
-                <Col lg={2}>
+                <Col className="toHideOnMobile" lg={2}>
                     <Container className="thumbnails">
                         <Row>
                             {
                                 property?.images.map((pro, i)=>{
                                     return (
-                                        <Col onClick={()=>setActive(i)} key={"img-"+i} style={{padding:0}} lg={12}>
+                                        <Col sm={2} onClick={()=>setActive(i)} key={"img-"+i} style={{padding:0}} lg={12}>
                                             <img src={baseUrl+"/listings/image/"+pro} alt="" />
                                         </Col>
                                     )
