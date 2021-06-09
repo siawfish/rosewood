@@ -69,8 +69,8 @@ export default function Property() {
                                     {
                                         amenitiesArr.map((amenity,i)=>{
                                             return (
-                                                <Col lg={3}>
-                                                    <div key={`key-${i}`} className="desc">{amenity}</div>
+                                                <Col key={`key-${i}`} lg={3}>
+                                                    <div className="desc">{amenity}</div>
                                                 </Col>
                                             )
                                         })

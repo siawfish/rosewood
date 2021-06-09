@@ -60,7 +60,7 @@ export default function InterestForm({
 
     return (
         <Modal centered show={open} onHide={handleClose}>
-            <Modal.Body>
+            <Modal.Body className="interestForm">
                 {
                     success ?
                     <Feedback messageStyle={{textTransform:"capitalize"}} icon={<FaHandshake />} message={`Thank you for showing interest in ${property?.title}`} /> :

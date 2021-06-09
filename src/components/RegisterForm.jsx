@@ -33,8 +33,8 @@ export default function RegisterForm() {
             setErr("Kindly enter a valid last name")
             return false
         }
-        if(!formDetails.email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) || !formDetails.email.match("@rosewood.com")){
-            setErr("Kindly enter your work email. eg: xyz@rosewood.com")
+        if(!formDetails.email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) || !formDetails.email.match("@rosewoodgh.com")){
+            setErr("Kindly enter your work email. eg: xyz@rosewoodgh.com")
             return false
         }
         if(!formDetails.password.match(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/)){

@@ -5,6 +5,7 @@ import Map from '../../components/Map'
 import PropertySearch from '../../components/PropertySearch'
 import { useSelector } from 'react-redux'
 import { useParams } from "react-router-dom";
+import Feedback from '../../components/Feedback'
 
 export default function Properties() {
     const { key } = useParams()
@@ -21,7 +22,7 @@ export default function Properties() {
     React.useEffect(() => {
         if(search!==""){
             let displayListings = listings.filter(list=>{
-                return list.title.toLowerCase().includes(search.toLowerCase()) || list.type.toLowerCase().includes(search.toLowerCase()) || list.price === search || list.location.toLowerCase().includes(search.toLowerCase())
+                return list?.title.toLowerCase().includes(search.toLowerCase()) || list?.type.toLowerCase().includes(search.toLowerCase()) || list?.price === search || list?.location.toLowerCase().includes(search.toLowerCase())
             })
             setList(displayListings)
         } else {
@@ -33,6 +34,7 @@ export default function Properties() {
         setSearch(e.target.value)
     }
     
+    console.log("list?.length>>>", list?.length);
     return (
         <Container className="properties" fluid>
             <Row>
@@ -41,7 +43,9 @@ export default function Properties() {
                         <PropertySearch defaultValue={search} onSearch={onTextInput} />
                         <div className="listItemsContainer">
                             {
-                                list.map((item, i)=>{
+                                list?.length < 1 ?
+                                <Feedback message="Sorry no listings are currently available" /> :
+                                list?.map((item, i)=>{
                                     return (
                                         <Item 
                                             key={i}

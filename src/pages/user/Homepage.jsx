@@ -6,39 +6,44 @@ import { useDispatch, useSelector } from 'react-redux'
 import { API } from '../../utils/config'
 import { setListings } from '../../redux/listingsStore/listingsStore'
 import { setAddress } from '../../redux/websiteStore/websiteStore'
+import Loading from '../../components/Loading'
 
 export default function Homepage() {
     const dispatch = useDispatch()
     const { listings } = useSelector(state => state.listings)
 
+    const [isLoading, setIsLoading] = React.useState(true)
+
     React.useEffect(()=>{
-        const getListings = ()=> {
-            API.get('/listings')
-            .then(res=> {
-                if(res.ok){
-                    dispatch(setListings(res.data.listings))
+        const getResources = async ()=> {
+            try {
+                const { ok, data, problem } = await API.get('/admin/website?id=CddADmRqXDTKiXSA4pUy')
+                if(ok){
+                    dispatch(setAddress(data?.info.address))
+                    await getListings()
                 } else {
-                    console.log(res);
+                    alert(data?.error??problem)
                 }
-            })
-            .catch(e=>{
-                console.log(e.message);
-            })
+            } catch (error) {
+                alert(error.message)
+            }
         }
     
-        const getWebsiteAssets = ()=> {
-            API.get('/admin/website?id=CddADmRqXDTKiXSA4pUy')
-            .then((res)=>{
-                if(res.ok){
-                    dispatch(setAddress(res.data?.info.address))
+        const getListings = async ()=> {
+            try {
+                const { ok, data, problem } = await API.get('/listings')
+                if(ok){
+                    dispatch(setListings(data))
+                    setIsLoading(false)
                 } else {
-                    console.log(res);
+                    alert(data?.error??problem)
                 }
-            })
-            .catch(e=>console.log(e))
+            } catch (error) {
+                alert(error.message)
+            }
         }
-        getListings()
-        getWebsiteAssets()
+
+        getResources()
     },[dispatch])
 
     
@@ -46,6 +51,12 @@ export default function Homepage() {
     const featuredListings = listings?.filter(list=>{
         return list.featuredListing === "true"
     })
+
+    if(isLoading){
+        return (
+            <Loading />
+        )
+    }
 
     return (
         <>

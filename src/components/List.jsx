@@ -18,7 +18,7 @@ export default function List({
                     <Card className="list" style={{marginBottom:10}}>
                         <Card.Header  className="inventory" eventKey="0">
                             <div className="left">
-                                <img src={baseUrl+'/listings/image/'+list?.images[0]} alt="" />
+                                <img src={list?.images[0]} alt="" />
                                 <div className="info">
                                     <div className="name">
                                         {list?.title}

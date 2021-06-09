@@ -26,8 +26,8 @@ export default function LoginForm() {
     }
 
     const isValid = ()=> {
-        if(!formDetails.email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) || !formDetails.email.match("@rosewood.com")){
-            setErr("Kindly enter your work email. eg: xyz@rosewood.com")
+        if(!formDetails.email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) || !formDetails.email.match("@rosewoodgh.com")){
+            setErr("Kindly enter your work email. eg: xyz@rosewoodgh.com")
             return false
         }
         return true
@@ -47,7 +47,7 @@ export default function LoginForm() {
                 dispatch(setUserProfile(res.data.auth.user))
                 dispatch(setIsAuthenticated(true))
             } else {
-                setErr("Oops! an error occured!")
+                setErr(res.data.error)
             }
             setIsLoading(false)
         })
@@ -56,6 +56,7 @@ export default function LoginForm() {
             setErr("Error " + e.message)
         })
     }
+
     return (
         <Row>
             <Col md={{ span: 4, offset: 4 }}>

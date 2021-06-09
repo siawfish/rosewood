@@ -47,11 +47,11 @@ export default function Dashcard({
                 </div>
             )
         }
-        if(type==="users"){
+        if(type==="interests"){
             return (
                 <div className="left">
                     <div style={iconStyle} className="icon"><FaUser /></div>
-                    <div style={titleStyle} className="title">Users</div>
+                    <div style={titleStyle} className="title">Interests</div>
                 </div>
             )
         }

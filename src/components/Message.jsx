@@ -6,7 +6,7 @@ import { HiOutlineMailOpen } from 'react-icons/hi'
 import { IoMdEye } from 'react-icons/io'
 import dayjs from 'dayjs'
 
-export default function User({
+export default function Message({
     message
 }) {
     return (

@@ -1,14 +1,18 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import Dashcard from './Dashcard'
+import { useSelector } from 'react-redux'
 
 export default function Dash() {
+    const { listings } = useSelector(state=>state.listings)
+    const { message } = useSelector(state => state.messages)
+    const { interests } = useSelector(state => state.interests)
+
     return (
         <Container>
             <Row>
                 <Col lg={4}>
                     <Dashcard 
-                        stats="30"
                         type="settings"
                         containerStyle={{
                             backgroundColor:"#000",
@@ -27,6 +31,7 @@ export default function Dash() {
                 </Col>
                 <Col lg={4}>
                     <Dashcard 
+                        stats={listings?.length}
                         type="inventory"
                         // stats={products?.products?.length}
                         containerStyle={{
@@ -46,8 +51,8 @@ export default function Dash() {
                 </Col>
                 <Col lg={4}>
                     <Dashcard 
-                        type="users"
-                        // stats={customers?.customers?.length}
+                        type="interests"
+                        stats={interests?.length}
                         containerStyle={{
                             backgroundColor:"#000",
                         }}
@@ -66,7 +71,7 @@ export default function Dash() {
                 <Col lg={4}>
                     <Dashcard 
                         type="messages"
-                        // stats={customers?.customers?.length}
+                        stats={message?.length}
                         containerStyle={{
                             backgroundColor:"#000",
                         }}

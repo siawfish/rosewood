@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import { baseUrl } from '../utils/data'
 import ImgsViewer from 'react-images-viewer'
 
 export default function ImageViewer({
@@ -11,7 +10,7 @@ export default function ImageViewer({
 
     let images = [] 
     property?.images.forEach(img=>{
-        images.push({src:baseUrl+"/listings/image/"+img})
+        images.push({src:img})
     })
 
     const gotoNext = ()=>{
@@ -27,7 +26,7 @@ export default function ImageViewer({
             <Row>
                 <Col sm={12} onClick={()=>setOpenViewer(true)} style={{padding:0}} lg={10}>
                     <div className="imageView">
-                        <img src={baseUrl+"/listings/image/"+property?.images[active]} alt="" />
+                        <img src={property?.images[active]} alt="" />
                         <div className="count">
                             {images.length}
                         </div>
@@ -40,7 +39,7 @@ export default function ImageViewer({
                                 property?.images.map((pro, i)=>{
                                     return (
                                         <Col sm={2} onClick={()=>setActive(i)} key={"img-"+i} style={{padding:0}} lg={12}>
-                                            <img src={baseUrl+"/listings/image/"+pro} alt="" />
+                                            <img src={pro} alt="" />
                                         </Col>
                                     )
                                 })

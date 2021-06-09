@@ -25,10 +25,6 @@ body {
   .aboutContent .biggerText {
     max-width: 100%!important;
   }
-  
-  .hero .heroContentWrapper, .toHideOnMobile {
-    display: none;
-  }
 
   .navbar .searchForm {
     display: block!important;
@@ -101,13 +97,6 @@ button:active {
   position: relative;
 }
 
-.hero .heroContentWrapper {
-  position: absolute;
-  top: 1%;
-  left: 25%;
-  width: 50%;
-}
-
 .hero img {
   width: 100%;
   border-radius: 16px;
@@ -169,6 +158,28 @@ button:active {
 .introCard {
   margin-top: 10%;
   text-align: left;
+}
+
+.containerStyle li a {
+  color: #5A995A;
+  float: left;
+  padding: 8px;
+  opacity: 0.7;
+}
+
+.containerStyle {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; 
+  margin-top: 40px;
+}
+
+.activeLinkClass {
+  font-weight: 700;
+  opacity: 1!important;
 }
 
 .roundBack {
@@ -791,11 +802,6 @@ button:active {
   margin-right: 20px;
 }
 
-.conWrapper {
-  height: 500px;
-  overflow: auto;
-}
-
 .inventory {
   background-color: #000!important;
   border-radius: 16px;
@@ -1096,4 +1102,24 @@ button:active {
 .priceCard .amount small {
   font-size: 14px;
   color: #555;
+}
+
+.interestForm form {
+  padding: 20px 40px;
+}
+
+.loader {
+  padding: 10% 0;
+}
+
+.loader .loaderWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader .loaderWrap img {
+  width: 50px;
+  height: 50px;
 }

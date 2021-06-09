@@ -2,7 +2,6 @@ import React from 'react'
 import { Col, Card, Button } from "react-bootstrap";
 import { BiBed, BiCar } from 'react-icons/bi'
 import { FaShower } from 'react-icons/fa'
-import { baseUrl } from '../utils/data'
 import numeral from 'numeral'
 import { useHistory } from 'react-router-dom'
 import SaleType from './SaleType';
@@ -19,13 +18,14 @@ export default function Item({
     const gotoDetails = ()=> {
         history.push('/property/'+property.id)
     }
+    
     return (
         <Col style={containerStyle} sm={sm} lg={lg}>
             <Card onClick={gotoDetails} className="item">
                 <div style={{position:"absolute",top:10,left:10}}>
                     <SaleType type={property?.type} />
                 </div>
-                <Card.Img variant="top" src={baseUrl+"/listings/image/"+property?.images[0]} />
+                <Card.Img variant="top" src={property?.images[0]} />
                 <Card.Body>
                 <div className="priceRow">
                     <Card.Title>&#8373; {numeral(property?.price).format('0,0')}</Card.Title>

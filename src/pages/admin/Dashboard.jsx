@@ -4,7 +4,7 @@ import Dash from '../../components/Dash'
 import GreetingsCard from '../../components/GreetingsCard'
 import Settings from '../../components/Settings'
 import Listings from '../../components/Listings'
-import Users from '../../components/Users'
+import Interests from '../../components/Interests'
 import Messages from '../../components/Messages'
 import FeatureDialog from '../../components/FeatureDialog'
 import { API } from '../../utils/config'
@@ -13,7 +13,7 @@ import { setMessages } from '../../redux/messagesStore/messagesStore'
 
 export default function Dashboard() {
     const dispatch = useDispatch()
-    const [activeKey, setActiveKey] = React.useState("#dash")
+    const [activeKey, setActiveKey] = React.useState("dash")
     const [show,setShow] = React.useState({
         status:false,
         type:null
@@ -40,76 +40,64 @@ export default function Dashboard() {
         })
     }
 
-    const onMenuClick = (name)=> {
-        setActiveKey(name)
-    }
-
     return (
         <Container className="dashboard">
-            <Tab.Container 
+            <Tab.Container
+                onSelect={(key)=>setActiveKey(key)}
+                defaultActiveKey={activeKey}
                 id="list-group-tabs-example"
             >
                 <Row>
                     <Col sm={3}>
                         <ListGroup 
-                            activeKey={activeKey}
                             style={{marginBottom:20}}
-                            defaultActiveKey="#dash"
                         >
                             <ListGroup.Item
-                                eventKey="#dash"
-                                onClick={()=>onMenuClick("#dash")}
+                                eventKey="dash"
                             >
                                 Dashboard
                             </ListGroup.Item>
                             <ListGroup.Item
-                                eventKey="#settings"
-                                onClick={()=>onMenuClick("#settings")}
+                                eventKey="settings"
                             >
                                 Settings
                             </ListGroup.Item>
                             <ListGroup.Item
-                                eventKey="#listings"
-                                onClick={()=>onMenuClick("#listings")}
+                                eventKey="listings"
                             >
                                 Listings
                             </ListGroup.Item>
                             <ListGroup.Item
-                                eventKey="#users"
-                                onClick={()=>onMenuClick("#users")}
+                                eventKey="interests"
                             >
-                                Users
+                                Interests
                             </ListGroup.Item>
                             <ListGroup.Item
-                                eventKey="#messages"
-                                onClick={()=>onMenuClick("#messages")}
+                                eventKey="messages"
                             >
                                 Messages
                             </ListGroup.Item>
                         </ListGroup>
                     </Col>
                     <Col sm={9}>
-                        <Tab.Content
-                            activeKey={activeKey}
-                            defaultActiveKey="#dash"
-                        >
+                        <Tab.Content>
                             <GreetingsCard 
                                 name="firstname lastname"
                                 onAddListing={addListing}
                             />
-                            <Tab.Pane eventKey="#dash">
+                            <Tab.Pane eventKey="dash">
                                 <Dash />
                             </Tab.Pane>
-                            <Tab.Pane eventKey="#settings">
+                            <Tab.Pane eventKey="settings">
                                 <Settings />
                             </Tab.Pane>
-                            <Tab.Pane eventKey="#listings">
+                            <Tab.Pane eventKey="listings">
                                 <Listings />
                             </Tab.Pane>
-                            <Tab.Pane eventKey="#users">
-                                <Users />
+                            <Tab.Pane eventKey="interests">
+                                <Interests />
                             </Tab.Pane>
-                            <Tab.Pane eventKey="#messages">
+                            <Tab.Pane eventKey="messages">
                                 <Messages />
                             </Tab.Pane>
                         </Tab.Content>
