@@ -10,8 +10,7 @@ import cr9 from '../assets/img/bg9.jpeg'
 
 import br1 from '../assets/img/cr1.png'
 
-export const baseUrl = 'http://localhost:8080/api'
-// https://rosewoodgh.herokuapp.com/api
+export const baseUrl = 'https://rosewoodgh.herokuapp.com/api'
 
 export const carouselData = [
     br1
