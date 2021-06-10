@@ -37,6 +37,10 @@ body {
   .listing .imageView .count {
     display: block!important;
   }
+
+  .overlayWrapper img {
+    width: 100%!important;
+  }
 }
 
 .navbar .searchForm {
@@ -90,6 +94,43 @@ button:active {
 
 .navbar-text span:hover {
   color: #5A995A75;
+}
+
+.overlayWrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlayWrapper img {
+  width: 650px;
+  cursor: pointer;
+}
+
+.overlayBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  border-radius: 8px;
+  padding: 5px 10px 10px!important;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 3;
+  opacity: 0.9;
 }
 
 .hero {

@@ -7,12 +7,31 @@ import { API } from '../../utils/config'
 import { setListings } from '../../redux/listingsStore/listingsStore'
 import { setAddress } from '../../redux/websiteStore/websiteStore'
 import Loading from '../../components/Loading'
+import Overlay from '../../components/Overlay'
 
 export default function Homepage() {
     const dispatch = useDispatch()
     const { listings } = useSelector(state => state.listings)
 
     const [isLoading, setIsLoading] = React.useState(true)
+    const [isActive, setIsActive] = React.useState(false)
+
+    React.useEffect(()=>{
+        const advertise = setTimeout(() => {
+            showAd()
+        }, 5000);
+        return ()=>clearTimeout(advertise)
+    },[])
+
+    const showAd = ()=> {
+        setIsActive(true)
+        document.body.style.overflowY = "hidden"
+    }
+
+    const closeAd = ()=> {
+        setIsActive(false)
+        document.body.style.overflowY = "auto"
+    }
 
     React.useEffect(()=>{
         const getResources = async ()=> {
@@ -59,12 +78,16 @@ export default function Homepage() {
     }
 
     return (
-        <>
+        <div>
+            {
+                isActive &&
+                <Overlay onClose={closeAd} />
+            }
             <Hero />
             <Intro />
             <Features 
                 featuredListings={featuredListings}
             />
-        </>
+        </div>
     )
 }
