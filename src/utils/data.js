@@ -8,10 +8,16 @@ import cr7 from '../assets/img/bg7.jpeg'
 import cr8 from '../assets/img/bg8.jpeg'
 import cr9 from '../assets/img/bg9.jpeg'
 
+import br1 from '../assets/img/cr1.png'
+
 export const baseUrl = 'http://localhost:8080/api'
 // https://rosewoodgh.herokuapp.com/api
 
 export const carouselData = [
+    br1
+]
+
+export const mobileCarouselData = [
     cr1,
     cr2,
     cr3,

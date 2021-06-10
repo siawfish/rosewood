@@ -63,24 +63,26 @@ export default function Contactus() {
         return true
     }
 
-    const onSave = (e)=> {
-        e.preventDefault()
-        setIsLoading(true)
-        if(!validate()){
-            setIsLoading(false)
-            return
-        }
-        API.post('/messages', formDetails)
-        .then(res=>{
-            if(res.ok){
+    const onSave = async (e)=> {
+        try {
+            e.preventDefault()
+            setIsLoading(true)
+            if(!validate()){
+                setIsLoading(false)
+                return
+            }
+            const { ok, data, problem } = await API.post('/messages', formDetails)
+            if(ok){
                 setSuccess(true)
                 resetState()
             } else {
-                setErr(res.data.error)
-                setIsLoading(false)
+                setErr(data?.error??problem)
             }
-        })
-        .catch(e=>console.log(e))
+            setIsLoading(false)
+        } catch (error) {
+            setErr(error.message)
+            setIsLoading(false)
+        }
     }
 
     return (
@@ -93,7 +95,7 @@ export default function Contactus() {
                                 Contact Information
                             </div>
                             <small>Kindly complete the form and our team will get back to you within 24 hours</small>
-                            <div style={{marginTop:40}} className="listItem"><span><FaPhoneAlt /></span> {address?.phone}</div>
+                            <div style={{marginTop:40}} className="listItem"><span><FaPhoneAlt /></span> {`+${address?.phone}`}</div>
                             <div className="listItem"><span><MdEmail /></span> {address?.email}</div>
                             <div className="listItem"><span><MdLocationOn /></span> {address?.street}, {address?.city}, {address?.region}, {address?.country}</div>
                             <div className="socialRow">

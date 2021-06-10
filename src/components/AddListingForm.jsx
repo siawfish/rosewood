@@ -14,6 +14,7 @@ export default function AddListingForm({
     React.useEffect(()=>{
         return ()=> resetState()
     },[])
+
     const checkbox1 = React.useRef(null)
     const checkbox2 = React.useRef(null)
     const [images, setImages] = React.useState([])
@@ -302,6 +303,9 @@ export default function AddListingForm({
                                 defaultValue={listingDetails.price}
                                 onChange={(e)=>onChange("price", e)}
                             />
+                            <Form.Text className="text-muted">
+                                Enter amount in USD
+                            </Form.Text>
                         </Form.Group>
                     </Form.Row>
                     <Form.Group controlId="exampleForm.ControlTextarea1">

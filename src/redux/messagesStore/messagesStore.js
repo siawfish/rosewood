@@ -1,7 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
-    messages: undefined
+    messages: []
 };
 
 const MessagesStore = createSlice({

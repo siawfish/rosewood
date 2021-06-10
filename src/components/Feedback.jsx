@@ -4,10 +4,11 @@ import { FaCheckCircle } from 'react-icons/fa'
 export default function Feedback({
     message,
     icon,
-    messageStyle
+    messageStyle,
+    containerStyle
 }) {
     return (
-        <div className="feedback">
+        <div style={containerStyle} className="feedback">
             <div className="icon">
                 {
                     icon ?? <FaCheckCircle />

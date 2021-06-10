@@ -7,31 +7,14 @@ import Listings from '../../components/Listings'
 import Interests from '../../components/Interests'
 import Messages from '../../components/Messages'
 import FeatureDialog from '../../components/FeatureDialog'
-import { API } from '../../utils/config'
-import { useDispatch } from 'react-redux'
-import { setMessages } from '../../redux/messagesStore/messagesStore'
 
 export default function Dashboard() {
-    const dispatch = useDispatch()
     const [activeKey, setActiveKey] = React.useState("dash")
+    
     const [show,setShow] = React.useState({
         status:false,
         type:null
     })
-
-    React.useEffect(()=>{
-        API.get('/messages')
-        .then((res)=>{
-            if(res.ok){
-                dispatch(setMessages(res.data.messages))
-            } else {
-                console.log("else block",res.data.error)
-            }
-        })
-        .catch(e=>{
-            console.log(e);
-        })
-    },[dispatch])
 
     const addListing = ()=> {
         setShow({

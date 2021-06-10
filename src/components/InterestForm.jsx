@@ -63,8 +63,14 @@ export default function InterestForm({
             <Modal.Body className="interestForm">
                 {
                     success ?
-                    <Feedback messageStyle={{textTransform:"capitalize"}} icon={<FaHandshake />} message={`Thank you for showing interest in ${property?.title}`} /> :
+                    <Feedback containerStyle={{marginBottom:50}} messageStyle={{textTransform:"capitalize", color:"#555555", letterSpacing:0.4}} icon={<FaHandshake />} message={`Thank you ${formDetails.name} for showing interest in ${property?.title.toLowerCase()}`} /> :
                     <Form>
+                        <div className="topic">
+                            Register your interest
+                        </div>
+                        <div className="small">
+                            Kindly complete the form to register ineterest.
+                        </div>
                         <div className="err">{err}</div>
                         <Form.Group controlId="formBasicName">
                             <Form.Label>Name</Form.Label>

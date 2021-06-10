@@ -6,6 +6,11 @@ export default function Overlay({
     onClose,
     onClick
 }) {
+
+    React.useEffect(()=>{
+        window.scroll(0,0)
+    },[])
+    
     return (
         <>
             <div className="overlay"></div>

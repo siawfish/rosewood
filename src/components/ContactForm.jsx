@@ -12,7 +12,7 @@ export default function ContactForm({
         <Form>
             <div className="err">{err}</div>
             <Form.Row>
-                <Form.Group sm={12} as={Col} controlId="formGridEmail">
+                <Form.Group sm={12} as={Col}>
                     <Form.Label>First name</Form.Label>
                     <Form.Control 
                         type="text" 
@@ -22,7 +22,7 @@ export default function ContactForm({
                     />
                 </Form.Group>
 
-                <Form.Group sm={12} as={Col} controlId="formGridPassword">
+                <Form.Group sm={12} as={Col}>
                     <Form.Label>Last name</Form.Label>
                     <Form.Control 
                         type="text" 
@@ -34,7 +34,7 @@ export default function ContactForm({
             </Form.Row>
 
             <Form.Row>
-                <Form.Group sm={12} as={Col} controlId="formGridEmail">
+                <Form.Group sm={12} as={Col}>
                     <Form.Label>Email</Form.Label>
                     <Form.Control 
                         type="email" 
@@ -44,7 +44,7 @@ export default function ContactForm({
                     />
                 </Form.Group>
 
-                <Form.Group sm={12} as={Col} controlId="formGridPassword">
+                <Form.Group sm={12} as={Col}>
                     <Form.Label>Phone</Form.Label>
                     <Form.Control 
                         type="number" 
@@ -55,7 +55,7 @@ export default function ContactForm({
                 </Form.Group>
             </Form.Row>
 
-            <Form.Group controlId="exampleForm.ControlTextarea1">
+            <Form.Group>
                 <Form.Label>Message</Form.Label>
                 <Form.Control 
                     as="textarea" 

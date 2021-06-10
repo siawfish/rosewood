@@ -10,13 +10,20 @@ import SaleType from '../../components/SaleType'
 import PriceCard from '../../components/PriceCard'
 
 export default function Property() {
-    const { listings } = useSelector(state=>state.listings)
     const { id } = useParams()
+    const { listings } = useSelector(state=>state.listings)
+
+    React.useEffect(()=>{
+        window.scroll(0,0)
+    },[])
+
     const propertyArr = listings.filter(pro=>{
         return pro.id === id
     })
+
     const property = propertyArr[0]
     const amenitiesArr = property.amenities.split(', ')
+    
     return (
         <Container className="property" fluid>
             <Row>

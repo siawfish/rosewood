@@ -8,9 +8,11 @@ import { setListings } from '../../redux/listingsStore/listingsStore'
 import { setAddress } from '../../redux/websiteStore/websiteStore'
 import Loading from '../../components/Loading'
 import Overlay from '../../components/Overlay'
+import { useHistory } from 'react-router'
 
 export default function Homepage() {
     const dispatch = useDispatch()
+    const history = useHistory()
     const { listings } = useSelector(state => state.listings)
 
     const [isLoading, setIsLoading] = React.useState(true)
@@ -65,7 +67,10 @@ export default function Homepage() {
         getResources()
     },[dispatch])
 
-    
+    const gotoPromoProperty = ()=> {
+        closeAd()
+        history.push('/property/HoNbbwQw22ZeFL5GI0Jb')
+    }
 
     const featuredListings = listings?.filter(list=>{
         return list.featuredListing === "true"
@@ -81,7 +86,7 @@ export default function Homepage() {
         <div>
             {
                 isActive &&
-                <Overlay onClose={closeAd} />
+                <Overlay onClick={gotoPromoProperty} onClose={closeAd} />
             }
             <Hero />
             <Intro />

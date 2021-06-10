@@ -1,14 +1,33 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
-import { useSelector } from 'react-redux'
+import { Container, Row, Col } from 'react-bootstrap'
+import { useDispatch, useSelector } from 'react-redux'
 import Feedback from './Feedback'
-import User from './User'
 import { AiOutlineStop } from 'react-icons/ai'
 import Pagination from "react-js-pagination"
+import { API } from '../utils/config'
+import { setInterests } from '../redux/interestsStore/interestsStore'
+import Interest from './Interest'
 
-export default function Users() {
+export default function Interests() {
+    const dispatch = useDispatch()
     const { interests } = useSelector(state=>state.interests)
     const [activePage, setActivePage] = React.useState(1)
+
+    React.useEffect(()=>{
+        const getInterests = async ()=> {
+            try {
+                const { ok, data, problem } = await API.get('/interests')
+                if(ok){
+                    dispatch(setInterests(data.reverse()))
+                } else {
+                    alert(data?.error??problem)
+                }
+            } catch (error) {
+                alert(error.message)
+            }
+        }
+        getInterests()
+    },[dispatch])
 
     const handlePageChange = (pageNumber)=> {
         setActivePage(pageNumber)
@@ -28,16 +47,17 @@ export default function Users() {
                     message="Sorry no users have expressed interest yet." 
                 /> :
                 <>
-                    {
-                        currentList.map((user,i)=>{
-                            return (
-                                <User 
-                                    key={"user-"+i}
-                                    user={user}
-                                />
-                            )
-                        })
-                    }
+                    <Row>
+                        {
+                            currentList.map((interest,i)=>{
+                                return (
+                                    <Col lg={6}>
+                                        <Interest interest={interest} />
+                                    </Col>
+                                )
+                            })
+                        }
+                    </Row>
                     <Pagination
                         activePage={activePage}
                         itemsCountPerPage={10}

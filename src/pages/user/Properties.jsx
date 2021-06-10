@@ -34,7 +34,6 @@ export default function Properties() {
         setSearch(e.target.value)
     }
     
-    console.log("list?.length>>>", list?.length);
     return (
         <Container className="properties" fluid>
             <Row>

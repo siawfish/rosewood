@@ -28,7 +28,7 @@ export default function Item({
                 <Card.Img variant="top" src={property?.images[0]} />
                 <Card.Body>
                 <div className="priceRow">
-                    <Card.Title>&#8373; {numeral(property?.price).format('0,0')}</Card.Title>
+                    <Card.Title>$ {numeral(property?.price).format('0,0')}</Card.Title>
                     <div className="statsContainer">
                         <div className="stats">
                             <span><BiBed /></span> {property?.bedrooms}

@@ -13,7 +13,7 @@ export default function PriceCard({
         <>
             <Card className="priceCard">
                 <div className="title">Price</div>
-                <div className="amount">&#8373; {numeral(price).format('0,0')}{type==="rent"&&<small>/month</small>}</div>
+                <div className="amount">${numeral(price).format('0,0')}{type==="rent"&&<small>/month</small>}</div>
                 <Button onClick={()=>setShowInterestForm(true)} block>
                     Register interest
                 </Button>

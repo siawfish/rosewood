@@ -4,7 +4,6 @@ import { FaRegEdit, FaTrashAlt } from 'react-icons/fa'
 import { IoMdEye } from 'react-icons/io'
 import Thumbnail from './Thumbnail'
 import dayjs from 'dayjs'
-import { baseUrl } from '../utils/data'
 import numeral from 'numeral'
 
 export default function List({
@@ -30,7 +29,7 @@ export default function List({
                             </div>
                             <div className="right">
                                 <div className="price">
-                                    <small>&#8373;</small><h3>{numeral(list?.price).format('0,0')}</h3>
+                                    <small>$</small><h3>{numeral(list?.price).format('0,0')}</h3><small>{list?.type==="rent" && '/m'}</small>
                                 </div>
                                 <div className="actionButtons">
                                     <Accordion.Toggle className="customBtn" eventKey="0">
@@ -61,7 +60,7 @@ export default function List({
                                                         return (
                                                             <Thumbnail 
                                                                 key={"image-"+i}
-                                                                img={baseUrl+'/listings/image/'+image}  
+                                                                img={image}  
                                                             />
                                                         )
                                                     })
