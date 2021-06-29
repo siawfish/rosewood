@@ -17,10 +17,6 @@ export default function Nav() {
         history.push('/aboutus')
     }
 
-    const gotoContactus = ()=> {
-        history.push('/contactus')
-    }
-
     const gotoHome = ()=> {
         history.push('/')
     }
@@ -50,9 +46,6 @@ export default function Nav() {
                 </Navbar.Text>
                 <Navbar.Text style={path.match('/aboutus')&&{color:'#5A995A'}} onClick={gotoAboutus}>
                     About Us
-                </Navbar.Text>
-                <Navbar.Text style={path.match('/contactus')&&{color:'#5A995A'}} onClick={gotoContactus}>
-                    Contact Us
                 </Navbar.Text>
                 <Navbar.Text>
                     <ImPhone /> : <span>+233 24 793 8888 / +44 743 758 6493</span>

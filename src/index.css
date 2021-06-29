@@ -41,6 +41,27 @@ body {
   .overlayWrapper img {
     width: 100%!important;
   }
+
+  .introCard .card-body img {
+    width: 100%!important;
+    margin-right: 0!important;
+  }
+
+  .introCard .card-body {
+    flex-wrap: wrap;
+  }
+
+  .features {
+    padding:5%!important;
+  }
+
+  .guide {
+    padding:5%!important;
+  }
+
+  .guide .imageContainer img {
+    width: 100%!important;
+  }
 }
 
 .navbar .searchForm {
@@ -135,30 +156,6 @@ button:active {
 
 .hero {
   background-color: #f0f0f0;
-  position: relative;
-}
-
-.heroContent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 60%;
-  padding: 5%;
-}
-
-.heroContent .heading {
-  margin: 20px 0;
-  font-size: 25px;
-}
-
-.heroContent p {
-  font-weight: 300;
-}
-
-.heroContent button {
-  padding: 10px 20px;
-  margin-top: 40px;
 }
 
 .hero img {
@@ -210,7 +207,7 @@ button:active {
 
 .intro {
   text-align: center;
-  padding:5%
+  padding:5% 0;
 }
 
 .logo {
@@ -219,8 +216,62 @@ button:active {
 }
 
 .introCard {
-  margin-top: 10%;
+  margin-top: 5%;
   text-align: left;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.introCard .card-body {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.introCard .card-body .processWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.process {
+  max-width: 320px;
+  margin: 15px;
+}
+
+.crowdFunding {
+  padding: 10px;
+}
+
+.guide {
+  padding: 5% 0;
+}
+
+.guide p {
+  font-weight: 300;
+}
+
+.guide .imageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.guide .imageContainer img {
+  width: 70%;
+}
+
+.crowdFunding p small {
+  font-weight: 300!important;
+}
+
+.introCard .card-body img {
+  width: 400px;
+  height: 300px;
+  margin-right: 20px;
+  border-radius: 8px;
 }
 
 .containerStyle li a {
@@ -246,17 +297,17 @@ button:active {
 }
 
 .roundBack {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
   background-color: rgba(255, 105, 180, 0.219);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  font-size: 25px;
+  font-size: 20px;
   color: hotpink;
 }
 
@@ -300,7 +351,7 @@ button:active {
 
 .features {
   text-align: center;
-  padding:5%
+  padding:5% 0;
 }
 
 .features .card {
@@ -321,8 +372,6 @@ button:active {
 
 .footerContainer {
   padding-top: 5%;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 
 .footerContainer p {

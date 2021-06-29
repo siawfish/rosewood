@@ -9,6 +9,7 @@ import { setAddress } from '../../redux/websiteStore/websiteStore'
 import Loading from '../../components/Loading'
 import Overlay from '../../components/Overlay'
 import { useHistory } from 'react-router'
+import { Container } from 'react-bootstrap'
 
 export default function Homepage() {
     const dispatch = useDispatch()
@@ -83,7 +84,7 @@ export default function Homepage() {
     }
 
     return (
-        <div>
+        <Container style={{padding:0}}>
             {
                 isActive &&
                 <Overlay onClick={gotoPromoProperty} onClose={closeAd} />
@@ -93,6 +94,6 @@ export default function Homepage() {
             <Features 
                 featuredListings={featuredListings}
             />
-        </div>
+        </Container>
     )
 }

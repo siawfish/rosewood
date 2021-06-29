@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Row, Col, Container } from 'react-bootstrap'
 import bg from '../../assets/img/aboutBg.png'
 
 export default function Aboutus() {
+    useEffect(()=>{
+        window.scroll(0,0)
+    },[])
+    
     return (
         <div className="about">
             <Row>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { MdEmail, MdLocationOn } from 'react-icons/md'
@@ -10,16 +10,20 @@ import Feedback from '../../components/Feedback'
 
 export default function Contactus() {
     const { address } = useSelector(state=>state.website)
-    const [formDetails, setFormDetails] = React.useState({
+    const [formDetails, setFormDetails] = useState({
         firstName:"",
         lastName:"",
         email:"",
         phone:"",
         message:""
     })
-    const [isLoading, setIsLoading] = React.useState(false)
-    const [err, setErr] = React.useState("")
-    const [success, setSuccess] = React.useState(false)
+    const [isLoading, setIsLoading] = useState(false)
+    const [err, setErr] = useState("")
+    const [success, setSuccess] = useState(false)
+
+    useEffect(()=>{
+        window.scroll(0,0)
+    },[])
 
     const onChange = (name, e)=> {
         setErr("")

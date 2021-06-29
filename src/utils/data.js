@@ -1,28 +1,10 @@
-import cr1 from '../assets/img/bg1.jpeg'
-import cr2 from '../assets/img/bg2.jpeg'
-import cr3 from '../assets/img/bg3.jpeg'
-import cr4 from '../assets/img/bg4.jpeg'
-import cr5 from '../assets/img/bg5.jpeg'
-import cr6 from '../assets/img/bg6.jpeg'
 import cr7 from '../assets/img/bg7.jpeg'
 import cr8 from '../assets/img/bg8.jpeg'
 import cr9 from '../assets/img/bg9.jpeg'
 
-import br1 from '../assets/img/cr1.png'
-
 export const baseUrl = 'https://rosewoodgh.herokuapp.com/api'
 
 export const carouselData = [
-    br1
-]
-
-export const mobileCarouselData = [
-    cr1,
-    cr2,
-    cr3,
-    cr4,
-    cr5,
-    cr6,
     cr7,
     cr8,
     cr9

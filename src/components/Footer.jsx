@@ -7,9 +7,10 @@ import logo from '../assets/img/logo.png'
 export default function Footer() {
     const location = useLocation()
     const { pathname } = location
+
     return (
         <Container style={pathname.match('/admin')&&{backgroundColor:"#000", color:"#f0f0f0"}} fluid className="footer">
-            <Container fluid className="footerContainer">
+            <Container className="footerContainer">
                 <Row>
                     <Col lg={5}>
                         <div className="logo">
@@ -26,27 +27,21 @@ export default function Footer() {
                         <div className="heading">Company</div>
                         <ul>
                             <li><Link to="/admin">Admin</Link></li>
-                            <li>Contact</li>
-                            <li>Career</li>
-                            <li>Blog</li>
+                            <li><Link to="/contactus">Contact</Link></li>
                         </ul>
                     </Col>
                     <Col lg={2}>
                         <div className="heading">About</div>
                         <ul>
-                            <li>About Anyplace</li>
-                            <li>Contact</li>
-                            <li>Career</li>
-                            <li>Blog</li>
+                            <li><Link to="/contactus">Contact</Link></li>
+                            <li><Link to="/aboutus">About us</Link></li>
                         </ul>
                     </Col>
                     <Col lg={3}>
                         <div className="heading">Support</div>
                         <ul>
-                            <li>FAQ</li>
-                            <li>Group Booking</li>
-                            <li>City Guide</li>
-                            <li>Cancellation Option</li>
+                            <li><Link to="/contactus">Contact</Link></li>
+                            <li><Link to="/guide-to-investing">Guide to investing</Link></li>
                         </ul>
                     </Col>
                 </Row>

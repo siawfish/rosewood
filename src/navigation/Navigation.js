@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 import Aboutus from '../pages/user/Aboutus';
 import Contactus from '../pages/user/Contactus';
+import Guide from '../pages/user/Guide';
 import Homepage from '../pages/user/Homepage'
 import Login from '../pages/user/Login';
 import Properties from '../pages/user/Properties';
@@ -25,6 +26,9 @@ export default function Navigation() {
                 </Route>
                 <Route exact path="/login">
                     <Login />
+                </Route>
+                <Route exact path="/guide-to-investing">
+                    <Guide />
                 </Route>
                 <Route exact path="/register">
                     <Register />

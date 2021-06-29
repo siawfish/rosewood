@@ -12,10 +12,11 @@ export default function Features({
           <Row>
               {
                 featuredListings?.map((pro, i)=>{
-                  if(i<4){
+                  if(i<3){
                     return(
                       <Item 
                         key={i} 
+                        lg={4}
                         property={pro} 
                       />
                     )
