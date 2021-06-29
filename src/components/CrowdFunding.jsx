@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function CrowdFunding() {
     return (
@@ -11,7 +12,7 @@ export default function CrowdFunding() {
                 But you do not have enough funds, or you want to reduce the risk as its your first time 
                 We know many people in the same situation</small>
             </p>
-            <p><small>There are simple solutions which we have been doing for years. <a href="/guide-to-investing">Guide to investing.</a></small></p>
+            <p><small>There are simple solutions which we have been doing for years. <Link to="/guide-to-investing">Guide to investing.</Link></small></p>
             <p><small>We will put you together with people of the same interest as yourself. 
                 Depending on your circumstances, you can buy in from 20%. The paperwork is all 
                 handled by us and the units are all managed by Rosewood once completed. This has

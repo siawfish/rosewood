@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Container } from 'react-bootstrap'
 import investing from '../../assets/img/investing.jpeg'
 
 export default function Guide() {
+
+    useEffect(()=>{
+        window.scroll(0,0)
+    },[])
+    
     return (
         <Container className="guide">
             <div style={{marginBottom:40}} className="logo text-center">Guide to Investing</div>
