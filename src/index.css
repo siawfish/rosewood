@@ -55,12 +55,16 @@ body {
     padding:5%!important;
   }
 
-  .guide {
+  /* .guide {
     padding:5%!important;
   }
 
   .guide .imageContainer img {
     width: 100%!important;
+  } */
+  
+  .hero img {
+    height: 100%!important;
   }
 }
 
@@ -130,7 +134,7 @@ button:active {
 }
 
 .overlayWrapper img {
-  width: 650px;
+  width: 80%;
   cursor: pointer;
 }
 
@@ -160,6 +164,7 @@ button:active {
 
 .hero img {
   width: 100%;
+  height: 700px;
 }
 
 .hero .biggerText {

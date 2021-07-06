@@ -19,7 +19,7 @@ export default function CrowdFunding() {
                  been very successful for other investors</small>
             </p>
             <div className="bolderText">
-                Investors
+                Developers
             </div>
             <p><small>We will put you in contact with a reliable funds manager where you will 
                 be assessed and can be funded for your project. </small>

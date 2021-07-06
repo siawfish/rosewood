@@ -7,13 +7,13 @@ import CrowdFunding from './CrowdFunding'
 
 export default function Intro() {
     return (
-        <Container className="intro" fluid>
+        <Container className="intro">
             <div className="logo">The Process</div>
             <small>The most rewarding destination for all home/commercial related services</small>
             <IntroCard 
                 children={<Processes />} 
             />
-            <div style={{marginTop:50}} className="bolderText">Crowd Funding</div>
+            <div style={{marginTop:50}} className="logo">Crowd Funding</div>
             <small>Looking to invest in Ghana real estate?</small>
             <IntroCard 
                 containerStyle={{flexDirection:"row-reverse"}} 

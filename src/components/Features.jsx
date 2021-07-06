@@ -6,17 +6,17 @@ export default function Features({
   featuredListings
 }) {
   return (
-      <Container fluid className="features">
-          <div className="bolderText">Featured Properties</div>
+      <Container className="features">
+          <div className="logo">Featured Properties</div>
           <small>The most rewarding destination for all home/commercial related services</small>
           <Row>
               {
                 featuredListings?.map((pro, i)=>{
-                  if(i<3){
+                  if(i<4){
                     return(
                       <Item 
                         key={i} 
-                        lg={4}
+                        lg={3}
                         property={pro} 
                       />
                     )

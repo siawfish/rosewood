@@ -84,7 +84,7 @@ export default function Homepage() {
     }
 
     return (
-        <Container style={{padding:0}}>
+        <Container fluid style={{padding:0}}>
             {
                 isActive &&
                 <Overlay onClick={gotoPromoProperty} onClose={closeAd} />
