@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux'
 import { API } from '../../utils/config'
 import ContactForm from '../../components/ContactForm'
 import Feedback from '../../components/Feedback'
+import FadeIn from 'react-fade-in';
 
 export default function Contactus() {
     const { address } = useSelector(state=>state.website)
@@ -90,45 +91,47 @@ export default function Contactus() {
     }
 
     return (
-        <div className="contact">
-            <Container className="contactCard">
-                <Row>
-                    <Col style={{paddingLeft:0}} lg={5}>
-                        <div className="left">
-                            <div className="biggerText">
-                                Contact Information
+        <FadeIn transitionDuration={2000}>
+            <div className="contact">
+                <Container className="contactCard">
+                    <Row>
+                        <Col style={{paddingLeft:0}} lg={5}>
+                            <div className="left">
+                                <div className="biggerText">
+                                    Contact Information
+                                </div>
+                                <small>Kindly complete the form and our team will get back to you within 24 hours</small>
+                                <div style={{marginTop:40}} className="listItem"><span><FaPhoneAlt /></span> {`+${address?.phone}`}</div>
+                                <div className="listItem"><span><MdEmail /></span> {address?.email}</div>
+                                <div className="listItem"><span><MdLocationOn /></span> {address?.street}, {address?.city}, {address?.region}, {address?.country}</div>
+                                <div className="socialRow">
+                                    <div className="icon"><FaFacebookSquare /></div>
+                                    <div className="icon"><FaTwitterSquare /></div>
+                                    <div className="icon"><FaInstagramSquare /></div>
+                                </div>
                             </div>
-                            <small>Kindly complete the form and our team will get back to you within 24 hours</small>
-                            <div style={{marginTop:40}} className="listItem"><span><FaPhoneAlt /></span> {`+${address?.phone}`}</div>
-                            <div className="listItem"><span><MdEmail /></span> {address?.email}</div>
-                            <div className="listItem"><span><MdLocationOn /></span> {address?.street}, {address?.city}, {address?.region}, {address?.country}</div>
-                            <div className="socialRow">
-                                <div className="icon"><FaFacebookSquare /></div>
-                                <div className="icon"><FaTwitterSquare /></div>
-                                <div className="icon"><FaInstagramSquare /></div>
+                        </Col>
+                        <Col lg={7}>
+                            <div className="right">
+                                <div className="title">Any questions or remarks? Just write us a message.</div>
+                                {
+                                    success ? 
+                                    <Feedback 
+                                        message="Thank you for your interest. An agent will contact you within 24 hours."
+                                    /> :
+                                    <ContactForm 
+                                        onSave={onSave}
+                                        isLoading={isLoading}
+                                        err={err}
+                                        onChange={onChange}
+                                        formDetails={formDetails}
+                                    />
+                                }
                             </div>
-                        </div>
-                    </Col>
-                    <Col lg={7}>
-                        <div className="right">
-                            <div className="title">Any questions or remarks? Just write us a message.</div>
-                            {
-                                success ? 
-                                <Feedback 
-                                    message="Thank you for your interest. An agent will contact you within 24 hours."
-                                /> :
-                                <ContactForm 
-                                    onSave={onSave}
-                                    isLoading={isLoading}
-                                    err={err}
-                                    onChange={onChange}
-                                    formDetails={formDetails}
-                                />
-                            }
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+        </FadeIn>
     )
 }

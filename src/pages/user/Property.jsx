@@ -8,6 +8,7 @@ import { BiBed, BiCar } from 'react-icons/bi'
 import { FaShower } from 'react-icons/fa'
 import SaleType from '../../components/SaleType'
 import PriceCard from '../../components/PriceCard'
+import FadeIn from 'react-fade-in';
 
 export default function Property() {
     const { id } = useParams()
@@ -25,76 +26,78 @@ export default function Property() {
     const amenitiesArr = property.amenities.split(', ')
     
     return (
-        <Container className="property" fluid>
-            <Row>
-                <Col sm={12} lg={10}>
-                    <ImageViewer property={property} />
-                </Col>
-                <Col style={{padding:0}} lg={2}>
-                    <Map 
-                        places={[property]} 
-                        defaultCenter={property?.cordinates} 
-                        containerStyle={{height:670}} 
-                    />
-                </Col>
-            </Row>
-            <Row>
-                <Container className="propertyInfo">
-                    <Row>
-                        <Col lg={8}>
-                            <div className="infoSection">
-                                <div className="titleSection">
-                                    <div className="title">{`${property.title.toLowerCase()} by ${property.developer}`}</div>
-                                    <div className="statsContainer">
-                                        <div className="statsWrapper">
-                                            <div className="stats">
-                                                <span><BiBed /></span> {property?.bedrooms}
+        <FadeIn transitionDuration={3000}>
+            <Container className="property" fluid>
+                <Row>
+                    <Col sm={12} lg={10}>
+                        <ImageViewer property={property} />
+                    </Col>
+                    <Col style={{padding:0}} lg={2}>
+                        <Map 
+                            places={[property]} 
+                            defaultCenter={property?.cordinates} 
+                            containerStyle={{height:670}} 
+                        />
+                    </Col>
+                </Row>
+                <Row>
+                    <Container className="propertyInfo">
+                        <Row>
+                            <Col lg={8}>
+                                <div className="infoSection">
+                                    <div className="titleSection">
+                                        <div className="title">{`${property.title.toLowerCase()} by ${property.developer}`}</div>
+                                        <div className="statsContainer">
+                                            <div className="statsWrapper">
+                                                <div className="stats">
+                                                    <span><BiBed /></span> {property?.bedrooms}
+                                                </div>
+
+                                                <div className="stats">
+                                                    <span><FaShower /></span> {property?.bathrooms}
+                                                </div>
+
+                                                <div className="stats">
+                                                    <span><BiCar /></span> {property?.parkingSpace}
+                                                </div>
                                             </div>
 
-                                            <div className="stats">
-                                                <span><FaShower /></span> {property?.bathrooms}
-                                            </div>
-
-                                            <div className="stats">
-                                                <span><BiCar /></span> {property?.parkingSpace}
-                                            </div>
+                                            <SaleType type={property?.type} />
                                         </div>
-
-                                        <SaleType type={property?.type} />
                                     </div>
                                 </div>
-                            </div>
-                            <div className="infoSection">
-                                <div className="heading">Description</div>
-                                <div className="desc">
-                                    {property?.desc}
+                                <div className="infoSection">
+                                    <div className="heading">Description</div>
+                                    <div className="desc">
+                                        {property?.desc}
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="infoSection">
-                                <div className="heading">Amenities</div>
-                                <Row>
-                                    {
-                                        amenitiesArr.map((amenity,i)=>{
-                                            return (
-                                                <Col key={`key-${i}`} lg={3}>
-                                                    <div className="desc">{amenity}</div>
-                                                </Col>
-                                            )
-                                        })
-                                    }
-                                </Row>
-                            </div>
-                            <div className="infoSection">
-                                <div className="heading">Location</div>
-                                <div className="desc">{property?.location}</div>
-                            </div>
-                        </Col>
-                        <Col lg={4}>
-                            <PriceCard property={property} price={property?.price} type={property?.type} />
-                        </Col>
-                    </Row>
-                </Container>
-            </Row>
-        </Container>
+                                <div className="infoSection">
+                                    <div className="heading">Amenities</div>
+                                    <Row>
+                                        {
+                                            amenitiesArr.map((amenity,i)=>{
+                                                return (
+                                                    <Col key={`key-${i}`} lg={3}>
+                                                        <div className="desc">{amenity}</div>
+                                                    </Col>
+                                                )
+                                            })
+                                        }
+                                    </Row>
+                                </div>
+                                <div className="infoSection">
+                                    <div className="heading">Location</div>
+                                    <div className="desc">{property?.location}</div>
+                                </div>
+                            </Col>
+                            <Col lg={4}>
+                                <PriceCard property={property} price={property?.price} type={property?.type} />
+                            </Col>
+                        </Row>
+                    </Container>
+                </Row>
+            </Container>
+        </FadeIn>
     )
 }

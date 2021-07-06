@@ -6,6 +6,7 @@ import PropertySearch from '../../components/PropertySearch'
 import { useSelector } from 'react-redux'
 import { useParams } from "react-router-dom";
 import Feedback from '../../components/Feedback'
+import FadeIn from 'react-fade-in';
 
 export default function Properties() {
     const { key } = useParams()
@@ -35,36 +36,38 @@ export default function Properties() {
     }
     
     return (
-        <Container className="properties" fluid>
-            <Row>
-                <Col className="propertiesCol" style={{padding:0}} sm={12} lg={5}>
-                    <div className="listContainer">
-                        <PropertySearch defaultValue={search} onSearch={onTextInput} />
-                        <div className="listItemsContainer">
-                            {
-                                list?.length < 1 ?
-                                <Feedback message="Sorry no listings are currently available" /> :
-                                list?.map((item, i)=>{
-                                    return (
-                                        <Item 
-                                            key={i}
-                                            property={item}
-                                            lg={6}
-                                            seeMore={false}
-                                            containerStyle={{
-                                                padding:5
-                                            }}
-                                        />
-                                    )
-                                })
-                            }
+        <FadeIn transitionDuration={2000}>
+            <Container className="properties" fluid>
+                <Row>
+                    <Col className="propertiesCol" style={{padding:0}} sm={12} lg={5}>
+                        <div className="listContainer">
+                            <PropertySearch defaultValue={search} onSearch={onTextInput} />
+                            <div className="listItemsContainer">
+                                {
+                                    list?.length < 1 ?
+                                    <Feedback message="Sorry no listings are currently available" /> :
+                                    list?.map((item, i)=>{
+                                        return (
+                                            <Item 
+                                                key={i}
+                                                property={item}
+                                                lg={6}
+                                                seeMore={false}
+                                                containerStyle={{
+                                                    padding:5
+                                                }}
+                                            />
+                                        )
+                                    })
+                                }
+                            </div>
                         </div>
-                    </div>
-                </Col>
-                <Col style={{paddingRight:0}} sm={0} lg={7}>
-                    <Map places={listings} />
-                </Col>
-            </Row>
-        </Container>
+                    </Col>
+                    <Col style={{paddingRight:0}} sm={0} lg={7}>
+                        <Map places={listings} />
+                    </Col>
+                </Row>
+            </Container>
+        </FadeIn>
     )
 }

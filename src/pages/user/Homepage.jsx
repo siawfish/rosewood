@@ -10,6 +10,8 @@ import Loading from '../../components/Loading'
 import Overlay from '../../components/Overlay'
 import { useHistory } from 'react-router'
 import { Container } from 'react-bootstrap'
+import FadeIn from 'react-fade-in';
+import LazyLoad from 'react-lazyload';
 
 export default function Homepage() {
     const dispatch = useDispatch()
@@ -84,16 +86,22 @@ export default function Homepage() {
     }
 
     return (
-        <Container fluid style={{padding:0}}>
-            {
-                isActive &&
-                <Overlay onClick={gotoPromoProperty} onClose={closeAd} />
-            }
-            <Hero />
-            <Intro />
-            <Features 
-                featuredListings={featuredListings}
-            />
-        </Container>
+        <FadeIn transitionDuration={3000}>
+            <Container fluid style={{padding:0}}>
+                {
+                    isActive &&
+                    <Overlay onClick={gotoPromoProperty} onClose={closeAd} />
+                }
+                <Hero />
+                <LazyLoad height={200} offset={0}>
+                    <Intro />
+                </LazyLoad>
+                <LazyLoad height={200} offset={0}>
+                    <Features 
+                        featuredListings={featuredListings}
+                    />
+                </LazyLoad>
+            </Container>
+        </FadeIn>
     )
 }
